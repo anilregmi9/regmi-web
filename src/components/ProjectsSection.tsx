@@ -30,16 +30,24 @@ const ProjectsSection = () => {
 
   const galleryImages = [
     {
-      title: "Exploration survey in the Western Nepal mountains",
-      emoji: "🏔️"
+      title: "Sedimentary rock formation with clear geological layering",
+      image: "/lovable-uploads/fe17806d-449d-47de-9770-624ee16505aa.png"
     },
     {
-      title: "Helicopter-assisted geological reconnaissance",
-      emoji: "🚁"
+      title: "Field expedition - geological mapping near water formations",
+      image: "/lovable-uploads/a3b0539f-dc52-4b74-9763-fa7da52dce02.png"
     },
     {
-      title: "Geological field expedition",
-      emoji: "🔬"
+      title: "Stratified rock sample showing geological layers",
+      image: "/lovable-uploads/1a70a124-966e-4aa9-8d69-b99bb8919bb9.png"
+    },
+    {
+      title: "Colorful mineral specimen with blue and pink mineralization",
+      image: "/lovable-uploads/670305a6-f0b0-42d9-a94e-0a5c04cf78aa.png"
+    },
+    {
+      title: "Detailed geological specimen with surface textures",
+      image: "/lovable-uploads/c94bbc8f-0931-42c9-be20-5e057e6b6710.png"
     }
   ];
 
@@ -101,11 +109,15 @@ const ProjectsSection = () => {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
             {galleryImages.map((image, index) => (
               <Card key={index} className="shadow-soft hover:shadow-earth transition-all duration-300 group overflow-hidden">
-                <div className="aspect-video bg-gradient-to-br from-earth-cream to-earth-brown-light flex items-center justify-center text-4xl">
-                  {image.emoji}
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={image.image} 
+                    alt={image.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
                 <CardContent className="p-4">
                   <p className="text-sm text-muted-foreground">{image.title}</p>
