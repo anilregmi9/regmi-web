@@ -16,7 +16,7 @@ const HeroSection = () => {
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl">
               Specializing in metallic mineral resource exploration and geological 
-              investigations for infrastructure development in Nepal.
+              investigations for mining and infrastructure development in Nepal.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button size="lg" className="shadow-earth">
