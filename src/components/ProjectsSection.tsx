@@ -34,7 +34,7 @@ const ProjectsSection = () => {
       image: "/lovable-uploads/fe17806d-449d-47de-9770-624ee16505aa.png"
     },
     {
-      title: "Field expedition - geological mapping near water formations",
+      title: "Refreshment during the educational tour for geological study around Tansen area.",
       image: "/lovable-uploads/a3b0539f-dc52-4b74-9763-fa7da52dce02.png"
     },
     {
