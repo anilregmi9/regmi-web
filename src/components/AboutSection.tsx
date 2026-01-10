@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { Hammer, Search, Compass, Navigation } from "lucide-react";
 
 const AboutSection = () => {
   return (
@@ -15,29 +16,33 @@ const AboutSection = () => {
           <div className="grid grid-cols-2 gap-4">
             <Card className="shadow-soft">
               <CardContent className="p-4">
-                <div className="aspect-square bg-earth-cream rounded-lg flex items-center justify-center">
-                  <span className="text-2xl">🏔️</span>
+                <div className="aspect-square bg-earth-cream rounded-lg flex flex-col items-center justify-center gap-2">
+                  <Hammer className="w-12 h-12 text-primary" />
+                  <span className="text-sm font-medium text-muted-foreground">Geological Hammer</span>
                 </div>
               </CardContent>
             </Card>
             <Card className="shadow-soft">
               <CardContent className="p-4">
-                <div className="aspect-square bg-earth-brown-light rounded-lg flex items-center justify-center">
-                  <span className="text-2xl">⛏️</span>
+                <div className="aspect-square bg-earth-brown-light rounded-lg flex flex-col items-center justify-center gap-2">
+                  <Search className="w-12 h-12 text-primary" />
+                  <span className="text-sm font-medium text-muted-foreground">Hand Lens</span>
                 </div>
               </CardContent>
             </Card>
             <Card className="shadow-soft">
               <CardContent className="p-4">
-                <div className="aspect-square bg-earth-orange rounded-lg flex items-center justify-center">
-                  <span className="text-2xl">🚁</span>
+                <div className="aspect-square bg-earth-orange rounded-lg flex flex-col items-center justify-center gap-2">
+                  <Compass className="w-12 h-12 text-primary" />
+                  <span className="text-sm font-medium text-muted-foreground">Brunton Compass</span>
                 </div>
               </CardContent>
             </Card>
             <Card className="shadow-soft">
               <CardContent className="p-4">
-                <div className="aspect-square bg-earth-stone rounded-lg flex items-center justify-center">
-                  <span className="text-2xl">🔬</span>
+                <div className="aspect-square bg-earth-stone rounded-lg flex flex-col items-center justify-center gap-2">
+                  <Navigation className="w-12 h-12 text-primary" />
+                  <span className="text-sm font-medium text-muted-foreground">GPS Tracker</span>
                 </div>
               </CardContent>
             </Card>
