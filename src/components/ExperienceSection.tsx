@@ -8,7 +8,7 @@ const ExperienceSection = () => {
       title: "Geologist (Consultant)",
       company: "Marakat Consult Pvt. Ltd./ Geo Cube Pvt. Ltd.",
       location: "Nepal",
-      period: "August 2023 - present",
+      period: "August 2023 - August 2025",
       description: "Providing consultation services for a wide range of geological and geotechnical investigations related to mining operations and engineering projects, including hydropower, road construction, and infrastructure development. Additionally, offering expert advice and support in the areas of mineral exploration, reserve estimation, and geotechnical assessments.",
       highlights: [
         "Expert consultation for mining operations and engineering projects",
