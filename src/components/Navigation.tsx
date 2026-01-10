@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, MapPin } from "lucide-react";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,8 +19,14 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="font-bold text-xl text-primary">
-            Anil Regmi
+          <div className="flex items-center gap-4">
+            <div className="font-bold text-xl text-primary">
+              Anil Regmi
+            </div>
+            <div className="hidden lg:flex items-center gap-1 text-sm text-muted-foreground">
+              <MapPin className="w-3.5 h-3.5" />
+              <span>16-24 Parramatta Rd, Strathfield, NSW, Australia</span>
+            </div>
           </div>
           
           {/* Desktop Navigation */}
