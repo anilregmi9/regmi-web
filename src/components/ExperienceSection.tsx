@@ -6,7 +6,7 @@ const ExperienceSection = () => {
   const experiences = [
     {
       title: "Geologist (Consultant)",
-      company: "Marakat Consult Pvt. Ltd.",
+      company: "Marakat Consult Pvt. Ltd./ Geo Cube Pvt. Ltd.",
       location: "Nepal",
       period: "August 2023 - present",
       description: "Providing consultation services for a wide range of geological and geotechnical investigations related to mining operations and engineering projects, including hydropower, road construction, and infrastructure development. Additionally, offering expert advice and support in the areas of mineral exploration, reserve estimation, and geotechnical assessments.",
