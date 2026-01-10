@@ -5,6 +5,7 @@ import { Hammer, Search, Compass, Navigation } from "lucide-react";
 
 const AboutSection = () => {
   const [isBruntonDialogOpen, setIsBruntonDialogOpen] = useState(false);
+  const [isHammerDialogOpen, setIsHammerDialogOpen] = useState(false);
 
   return (
     <section id="about" className="py-20 bg-background">
@@ -18,7 +19,10 @@ const AboutSection = () => {
 
         <div className="grid md:grid-cols-2 gap-8 items-center mb-16">
           <div className="grid grid-cols-2 gap-4">
-            <Card className="shadow-soft">
+            <Card 
+              className="shadow-soft cursor-pointer hover:shadow-lg transition-shadow"
+              onClick={() => setIsHammerDialogOpen(true)}
+            >
               <CardContent className="p-4">
                 <div className="aspect-square bg-earth-cream rounded-lg flex flex-col items-center justify-center gap-2">
                   <Hammer className="w-12 h-12 text-primary" />
@@ -100,6 +104,18 @@ const AboutSection = () => {
           <img 
             src="/lovable-uploads/brunton-compass-notes.png" 
             alt="Brunton Compass - A tool used by geologists to measure directions and angles in the field"
+            className="w-full h-auto rounded-lg"
+          />
+        </DialogContent>
+      </Dialog>
+
+      {/* Geological Hammer Dialog */}
+      <Dialog open={isHammerDialogOpen} onOpenChange={setIsHammerDialogOpen}>
+        <DialogContent className="max-w-2xl">
+          <DialogTitle className="sr-only">Geological Hammer Notes</DialogTitle>
+          <img 
+            src="/lovable-uploads/geological-hammer-notes.png" 
+            alt="Geological Hammer - A sturdy tool used by geologists for breaking, splitting and studying rocks in the field"
             className="w-full h-auto rounded-lg"
           />
         </DialogContent>
