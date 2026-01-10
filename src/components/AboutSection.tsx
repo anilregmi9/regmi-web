@@ -1,7 +1,11 @@
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { Hammer, Search, Compass, Navigation } from "lucide-react";
 
 const AboutSection = () => {
+  const [isBruntonDialogOpen, setIsBruntonDialogOpen] = useState(false);
+
   return (
     <section id="about" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -30,7 +34,10 @@ const AboutSection = () => {
                 </div>
               </CardContent>
             </Card>
-            <Card className="shadow-soft">
+            <Card 
+              className="shadow-soft cursor-pointer hover:shadow-lg transition-shadow"
+              onClick={() => setIsBruntonDialogOpen(true)}
+            >
               <CardContent className="p-4">
                 <div className="aspect-square bg-earth-orange rounded-lg flex flex-col items-center justify-center gap-2">
                   <Compass className="w-12 h-12 text-primary" />
@@ -85,6 +92,18 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
+
+      {/* Brunton Compass Dialog */}
+      <Dialog open={isBruntonDialogOpen} onOpenChange={setIsBruntonDialogOpen}>
+        <DialogContent className="max-w-2xl">
+          <DialogTitle className="sr-only">Brunton Compass Notes</DialogTitle>
+          <img 
+            src="/lovable-uploads/brunton-compass-notes.png" 
+            alt="Brunton Compass - A tool used by geologists to measure directions and angles in the field"
+            className="w-full h-auto rounded-lg"
+          />
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
