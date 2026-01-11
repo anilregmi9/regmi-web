@@ -94,10 +94,10 @@ All I hope was for the happiness of the bird and wish that the bird has found it
           <CardContent className="p-8 bg-gradient-to-b from-earth-cream/50 to-background">
             <div className="flex items-center justify-between mb-6">
               <h3 className="text-2xl md:text-3xl font-bold text-primary font-heading">
-                एक तरुण जस्तो
+                पोखरा
               </h3>
               <button 
-                onClick={() => copyToClipboard(poem1, "एक तरुण जस्तो")}
+                onClick={() => copyToClipboard(poem1, "पोखरा")}
                 className="p-2 hover:bg-muted rounded-full transition-colors"
                 title="Copy poem"
               >
@@ -122,10 +122,10 @@ All I hope was for the happiness of the bird and wish that the bird has found it
           <CardContent className="p-8 bg-gradient-to-b from-earth-orange/10 to-background">
             <div className="flex items-center justify-between mb-6">
               <h3 className="text-2xl md:text-3xl font-bold text-primary font-heading">
-                घर गल्ली टोल छिमेक
+                खाडी
               </h3>
               <button 
-                onClick={() => copyToClipboard(poem2, "घर गल्ली टोल छिमेक")}
+                onClick={() => copyToClipboard(poem2, "खाडी")}
                 className="p-2 hover:bg-muted rounded-full transition-colors"
                 title="Copy poem"
               >
