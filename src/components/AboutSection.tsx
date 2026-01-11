@@ -6,6 +6,8 @@ import { Hammer, Search, Compass, Navigation } from "lucide-react";
 const AboutSection = () => {
   const [isBruntonDialogOpen, setIsBruntonDialogOpen] = useState(false);
   const [isHammerDialogOpen, setIsHammerDialogOpen] = useState(false);
+  const [isLensDialogOpen, setIsLensDialogOpen] = useState(false);
+  const [isGpsDialogOpen, setIsGpsDialogOpen] = useState(false);
 
   return (
     <section id="about" className="py-20 bg-background">
@@ -30,7 +32,10 @@ const AboutSection = () => {
                 </div>
               </CardContent>
             </Card>
-            <Card className="shadow-soft">
+            <Card 
+              className="shadow-soft cursor-pointer hover:shadow-lg transition-shadow"
+              onClick={() => setIsLensDialogOpen(true)}
+            >
               <CardContent className="p-4">
                 <div className="aspect-square bg-earth-brown-light rounded-lg flex flex-col items-center justify-center gap-2">
                   <Search className="w-12 h-12 text-primary" />
@@ -49,7 +54,10 @@ const AboutSection = () => {
                 </div>
               </CardContent>
             </Card>
-            <Card className="shadow-soft">
+            <Card 
+              className="shadow-soft cursor-pointer hover:shadow-lg transition-shadow"
+              onClick={() => setIsGpsDialogOpen(true)}
+            >
               <CardContent className="p-4">
                 <div className="aspect-square bg-earth-stone rounded-lg flex flex-col items-center justify-center gap-2">
                   <Navigation className="w-12 h-12 text-primary" />
@@ -116,6 +124,30 @@ const AboutSection = () => {
           <img 
             src="/lovable-uploads/geological-hammer-notes.png" 
             alt="Geological Hammer - A sturdy tool used by geologists for breaking, splitting and studying rocks in the field"
+            className="w-full h-auto rounded-lg"
+          />
+        </DialogContent>
+      </Dialog>
+
+      {/* Hand Lens Dialog */}
+      <Dialog open={isLensDialogOpen} onOpenChange={setIsLensDialogOpen}>
+        <DialogContent className="max-w-2xl">
+          <DialogTitle className="sr-only">Hand Lens Notes</DialogTitle>
+          <img 
+            src="/lovable-uploads/hand-lens-notes.png" 
+            alt="Hand Lens - A small magnifying glass used by geologists to view minerals, fossils, and rocks closely"
+            className="w-full h-auto rounded-lg"
+          />
+        </DialogContent>
+      </Dialog>
+
+      {/* GPS Tracker Dialog */}
+      <Dialog open={isGpsDialogOpen} onOpenChange={setIsGpsDialogOpen}>
+        <DialogContent className="max-w-2xl">
+          <DialogTitle className="sr-only">GPS Tracker Notes</DialogTitle>
+          <img 
+            src="/lovable-uploads/gps-tracker-notes.png" 
+            alt="GPS Tracker - A device used for finding your location and navigating in the field"
             className="w-full h-auto rounded-lg"
           />
         </DialogContent>
