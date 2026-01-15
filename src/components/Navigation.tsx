@@ -1,19 +1,21 @@
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, MapPin } from "lucide-react";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   const navItems = [
-    { href: "#home", label: "Home" },
-    { href: "#about", label: "About" },
-    { href: "#experience", label: "Experience" },
-    { href: "#education", label: "Education" },
-    { href: "#skills", label: "Skills" },
-    { href: "#projects", label: "Projects" },
-    { href: "#contact", label: "Contact" },
-    { href: "#literature", label: "Literature" },
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/experience", label: "Experience" },
+    { href: "/education", label: "Education" },
+    { href: "/skills", label: "Skills" },
+    { href: "/projects", label: "Projects" },
+    { href: "/contact", label: "Contact" },
+    { href: "/literature", label: "Literature" },
   ];
 
   return (
@@ -21,9 +23,9 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center gap-4">
-            <div className="font-bold text-xl text-primary">
+            <Link to="/" className="font-bold text-xl text-primary">
               Anil Regmi
-            </div>
+            </Link>
             <div className="hidden lg:flex items-center gap-1 text-sm text-muted-foreground">
               <MapPin className="w-3.5 h-3.5" />
               <span>16-24 Parramatta Rd, Strathfield, NSW, Australia</span>
@@ -33,13 +35,17 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.href}
-                href={item.href}
-                className="text-muted-foreground hover:text-primary transition-colors duration-200"
+                to={item.href}
+                className={`transition-colors duration-200 ${
+                  location.pathname === item.href
+                    ? "text-primary font-medium"
+                    : "text-muted-foreground hover:text-primary"
+                }`}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -60,14 +66,18 @@ const Navigation = () => {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-border">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.href}
-                  href={item.href}
-                  className="block px-3 py-2 text-muted-foreground hover:text-primary transition-colors duration-200"
+                  to={item.href}
+                  className={`block px-3 py-2 transition-colors duration-200 ${
+                    location.pathname === item.href
+                      ? "text-primary font-medium"
+                      : "text-muted-foreground hover:text-primary"
+                  }`}
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
