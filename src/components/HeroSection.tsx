@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 
@@ -19,11 +20,11 @@ const HeroSection = () => {
               investigations for mining and infrastructure development in Nepal.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button size="lg" className="shadow-earth">
-                <a href="#contact">Get in Touch</a>
+              <Button size="lg" className="shadow-earth" asChild>
+                <Link to="/contact">Get in Touch</Link>
               </Button>
-              <Button variant="outline" size="lg">
-                <a href="#about">Learn More</a>
+              <Button variant="outline" size="lg" asChild>
+                <Link to="/about">Learn More</Link>
               </Button>
             </div>
           </div>
