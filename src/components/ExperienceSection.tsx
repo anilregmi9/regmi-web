@@ -29,6 +29,20 @@ const ExperienceSection = () => {
         "Managed core drilling, trenching, and pitting operations for geotechnical investigations",
         "Coordinated with government authorities for licensing and compliance"
       ]
+    },
+    {
+      title: "President",
+      company: "Nepal Geological Student's Society (NGSS)",
+      location: "Nepal",
+      period: "2019 - 2020",
+      description: "Led the Nepal Geological Student's Society, organizing academic events, workshops, and field trips to promote geological education and professional development among students.",
+      highlights: [
+        "Organized geological field trips and educational workshops",
+        "Coordinated with universities and professional bodies",
+        "Promoted geological sciences among students",
+        "Managed society operations and student engagement"
+      ],
+      link: "https://ngss.org.np/"
     }
   ];
 
@@ -78,6 +92,16 @@ const ExperienceSection = () => {
                     ))}
                   </div>
                 </div>
+                {exp.link && (
+                  <a 
+                    href={exp.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-block mt-4 text-primary hover:underline"
+                  >
+                    Visit Website →
+                  </a>
+                )}
               </CardContent>
             </Card>
           ))}
