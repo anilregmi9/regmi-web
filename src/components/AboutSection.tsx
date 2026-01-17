@@ -26,7 +26,7 @@ const AboutSection = () => {
     }
   ];
 
-  const experiences = [
+  const professionalExperiences = [
     {
       title: "Geologist (Consultant)",
       company: "Marakat Consult Pvt. Ltd./ Geo Cube Pvt. Ltd.",
@@ -38,7 +38,8 @@ const AboutSection = () => {
         "Mineral exploration, reserve estimation, and geotechnical assessments",
         "Hazard assessment and slope stability analysis for disaster risk management",
         "Develop mitigation plans for safer and more resilient project designs"
-      ]
+      ],
+      link: "https://marakat.com.np/"
     },
     {
       title: "Geologist",
@@ -52,7 +53,10 @@ const AboutSection = () => {
         "Managed core drilling, trenching, and pitting operations",
         "Coordinated with government authorities for licensing and compliance"
       ]
-    },
+    }
+  ];
+
+  const otherExperiences = [
     {
       title: "President",
       company: "Nepal Geological Student's Society (NGSS)",
@@ -255,7 +259,7 @@ const AboutSection = () => {
               </p>
             </div>
             <div className="space-y-8">
-              {experiences.map((exp, index) => (
+              {professionalExperiences.map((exp, index) => (
                 <Card key={index} className="shadow-earth">
                   <CardHeader>
                     <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
@@ -303,6 +307,66 @@ const AboutSection = () => {
                   </CardContent>
                 </Card>
               ))}
+            </div>
+
+            {/* Other Experiences */}
+            <div className="mt-16">
+              <div className="text-center mb-8">
+                <h3 className="text-3xl font-bold mb-4">Other Experiences</h3>
+                <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                  Leadership and community involvement in geological sciences.
+                </p>
+              </div>
+              <div className="space-y-8">
+                {otherExperiences.map((exp, index) => (
+                  <Card key={index} className="shadow-earth">
+                    <CardHeader>
+                      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+                        <div>
+                          <CardTitle className="text-2xl text-primary">{exp.title}</CardTitle>
+                          <h4 className="text-xl font-semibold text-foreground mt-2">{exp.company}</h4>
+                        </div>
+                        <div className="flex flex-col sm:flex-row gap-2">
+                          <div className="flex items-center gap-2 text-muted-foreground">
+                            <MapPin className="w-4 h-4" />
+                            <span>{exp.location}</span>
+                          </div>
+                          <div className="flex items-center gap-2 text-muted-foreground">
+                            <CalendarDays className="w-4 h-4" />
+                            <span>{exp.period}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-muted-foreground leading-relaxed mb-6">
+                        {exp.description}
+                      </p>
+                      <div className="space-y-3">
+                        <h5 className="font-semibold text-foreground">Key Responsibilities:</h5>
+                        <div className="grid gap-2">
+                          {exp.highlights.map((highlight, idx) => (
+                            <div key={idx} className="flex items-start gap-3">
+                              <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                              <span className="text-muted-foreground">{highlight}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                      {exp.link && (
+                        <a 
+                          href={exp.link} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="inline-block mt-4 text-primary hover:underline"
+                        >
+                          Visit Website →
+                        </a>
+                      )}
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
             </div>
           </div>
         )}
