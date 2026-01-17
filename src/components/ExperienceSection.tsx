@@ -41,7 +41,7 @@ const ExperienceSection = () => {
       period: "2019 - 2020",
       description: "Led the Nepal Geological Student's Society, organizing academic events, workshops, and field trips to promote geological education and professional development among students.",
       highlights: [
-        "Organized geological field trips and educational workshops",
+        "Organized geological seminars and educational workshops",
         "Coordinated with universities and professional bodies",
         "Promoted geological sciences among students",
         "Managed society operations and student engagement"
