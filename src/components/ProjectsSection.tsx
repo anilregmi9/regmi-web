@@ -134,6 +134,22 @@ const ProjectsSection = () => {
           </div>
         </div>
 
+        {/* Researches Section */}
+        <div className="border-t border-border pt-20 mb-20">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold mb-4">Researches</h3>
+          </div>
+          <div className="max-w-4xl mx-auto">
+            <Card className="shadow-soft">
+              <CardContent className="p-6">
+                <p className="text-muted-foreground leading-relaxed">
+                  My master's thesis focused on the stratigraphy, structural geology, and petrography of the Lesser Himalaya in the eastern Syangja region, along with the identification and assessment of mineral resources.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+
         <div className="border-t border-border pt-20">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold mb-4">Photo Gallery</h3>
