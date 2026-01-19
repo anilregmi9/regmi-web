@@ -105,14 +105,23 @@ const ContactSection = () => {
                   <div className="p-3 bg-accent/10 rounded-lg">
                     <Mail className="w-5 h-5 text-accent" />
                   </div>
-                  <div>
+                <div>
                     <h4 className="font-semibold">Email</h4>
-                    <a 
-                      href="mailto:anilr3gmi9@gmail.com" 
-                      className="text-muted-foreground hover:text-accent transition-colors"
-                    >
-                      anilr3gmi9@gmail.com
-                    </a>
+                    <p className="text-muted-foreground">
+                      <a 
+                        href="mailto:anilr3gmi9@gmail.com" 
+                        className="hover:text-accent transition-colors"
+                      >
+                        anilr3gmi9@gmail.com
+                      </a>
+                      {" / "}
+                      <a 
+                        href="mailto:anilregmi9@outlook.com" 
+                        className="hover:text-accent transition-colors"
+                      >
+                        anilregmi9@outlook.com
+                      </a>
+                    </p>
                   </div>
                 </div>
 
