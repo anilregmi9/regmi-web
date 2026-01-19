@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, MapPin } from "lucide-react";
+import { ExternalLink, MapPin, FlaskConical } from "lucide-react";
 
 const ProjectsSection = () => {
   const projects = [
@@ -26,6 +26,14 @@ const ProjectsSection = () => {
       tags: ["Geotechnical", "Hydropower", "Slope Stability"],
       image: "⚡"
     }
+  ];
+
+  const researchProjects = [
+    "Prospecting and exploration of copper deposit around Bhimshenthan area, Kavrepalanchowk",
+    "Prospecting and exploration of lead and zinc deposit around Marma-1, Darchula",
+    "Prospecting of Iron ore around Sungarkhal, Baitadi; Panini, Arghakhanchi; Rambha, Palpa and Chandrakot, Gulmi",
+    "Preliminary study of Iron copper ore around Nisikhola, Baglung; Bhutkhola, Tanahu",
+    "Detailed study of Slate deposit around Tarakhola, Baglung"
   ];
 
   const galleryImages = [
@@ -94,6 +102,36 @@ const ProjectsSection = () => {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        {/* Research Section */}
+        <div className="border-t border-border pt-20 mb-20">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold mb-4 flex items-center justify-center gap-3">
+              <FlaskConical className="w-8 h-8 text-primary" />
+              Research
+            </h3>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Research projects focused on mineral exploration and geological studies across Nepal.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <Card className="shadow-soft">
+              <CardContent className="p-6">
+                <ol className="space-y-4">
+                  {researchProjects.map((project, index) => (
+                    <li key={index} className="flex gap-4">
+                      <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 text-primary font-semibold flex items-center justify-center">
+                        {index + 1}
+                      </span>
+                      <p className="text-muted-foreground pt-1">{project}</p>
+                    </li>
+                  ))}
+                </ol>
+              </CardContent>
+            </Card>
+          </div>
         </div>
 
         <div className="border-t border-border pt-20">
