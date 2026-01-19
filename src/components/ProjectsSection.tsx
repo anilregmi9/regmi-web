@@ -139,11 +139,25 @@ const ProjectsSection = () => {
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold mb-4">Researches</h3>
           </div>
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto space-y-6">
             <Card className="shadow-soft">
               <CardContent className="p-6">
                 <p className="text-muted-foreground leading-relaxed">
                   My master's thesis focused on the stratigraphy, structural geology, and petrography of the Lesser Himalaya in the eastern Syangja region, along with the identification and assessment of mineral resources.
+                </p>
+              </CardContent>
+            </Card>
+            
+            <Card className="shadow-soft">
+              <CardContent className="p-6">
+                <h4 className="font-semibold text-lg mb-2">
+                  Landslide Characteristics and Distribution at the Kathmandu Kyirong Highway Corridor in Pre-Quake, Co-Seismic and Post-Quake Situations
+                </h4>
+                <p className="text-muted-foreground mb-2">
+                  Susmita Dhakal, Peng Cui, Li-Jun Su, Qiang Zou, Rama Ghimire, Sumika Pakhrin and <span className="font-semibold text-primary">Anil Regmi</span>
+                </p>
+                <p className="text-sm text-muted-foreground italic">
+                  Perspectives on Higher Education — A Peer Reviewed Journal
                 </p>
               </CardContent>
             </Card>
