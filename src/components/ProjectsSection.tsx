@@ -109,10 +109,10 @@ const ProjectsSection = () => {
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold mb-4 flex items-center justify-center gap-3">
               <FlaskConical className="w-8 h-8 text-primary" />
-              Research
+              Projects Led by Me
             </h3>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Research projects focused on mineral exploration and geological studies across Nepal.
+              Research and exploration projects I have led across Nepal.
             </p>
           </div>
 

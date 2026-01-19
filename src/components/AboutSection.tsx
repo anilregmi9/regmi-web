@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
-import { Hammer, Search, Compass, Navigation, GraduationCap, Calendar, Code, Users, CalendarDays, MapPin } from "lucide-react";
+import { Hammer, Search, Compass, Navigation, GraduationCap, Calendar, Code, Users, CalendarDays, MapPin, ChevronDown } from "lucide-react";
 
 const AboutSection = () => {
   const [isBruntonDialogOpen, setIsBruntonDialogOpen] = useState(false);
@@ -188,7 +188,8 @@ const AboutSection = () => {
               >
                 <CardContent className="p-4 text-center">
                   <h3 className="font-semibold text-primary mb-2">Education</h3>
-                  <p className="text-sm text-muted-foreground">Master's in Geology from Tribhuvan University</p>
+                  <p className="text-sm text-muted-foreground mb-2">Master's in Geology from Tribhuvan University</p>
+                  <ChevronDown className={`w-5 h-5 mx-auto text-muted-foreground transition-transform ${activeSection === 'education' ? 'rotate-180' : ''}`} />
                 </CardContent>
               </Card>
               <Card 
@@ -197,7 +198,8 @@ const AboutSection = () => {
               >
                 <CardContent className="p-4 text-center">
                   <h3 className="font-semibold text-primary mb-2">Experience</h3>
-                  <p className="text-sm text-muted-foreground">Mineral exploration and geotechnical investigations</p>
+                  <p className="text-sm text-muted-foreground mb-2">Mineral exploration and geotechnical investigations</p>
+                  <ChevronDown className={`w-5 h-5 mx-auto text-muted-foreground transition-transform ${activeSection === 'experience' ? 'rotate-180' : ''}`} />
                 </CardContent>
               </Card>
               <Card 
@@ -206,7 +208,8 @@ const AboutSection = () => {
               >
                 <CardContent className="p-4 text-center">
                   <h3 className="font-semibold text-primary mb-2">Expertise</h3>
-                  <p className="text-sm text-muted-foreground">Metallic mineral exploration and mapping</p>
+                  <p className="text-sm text-muted-foreground mb-2">Metallic mineral exploration and mapping</p>
+                  <ChevronDown className={`w-5 h-5 mx-auto text-muted-foreground transition-transform ${activeSection === 'expertise' ? 'rotate-180' : ''}`} />
                 </CardContent>
               </Card>
             </div>
