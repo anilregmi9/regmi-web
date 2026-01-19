@@ -20,8 +20,8 @@ const ProjectsSection = () => {
       image: "⛏️"
     },
     {
-      title: "Hydropower Geotechnical Investigation",
-      location: "Nilakantha Municipality",
+      title: "Geotechnical Investigation",
+      location: "Bagmati and Rupa",
       description: "Provided geotechnical assessment for hydropower development, including slope stability analysis and foundation recommendations.",
       tags: ["Geotechnical", "Hydropower", "Slope Stability"],
       image: "⚡"
