@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, BookOpen } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -27,6 +27,27 @@ const HeroSection = () => {
                 <Link to="/about">Learn More</Link>
               </Button>
             </div>
+            
+            {/* Goodreads Link */}
+            <a 
+              href="https://www.goodreads.com/anilregmi9" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex items-center gap-3 p-3 rounded-xl bg-card border border-border hover:border-accent transition-colors group"
+            >
+              <img 
+                src="/lovable-uploads/goodreads-profile.jpg" 
+                alt="Anil Regmi on Goodreads"
+                className="w-12 h-12 rounded-full object-cover"
+              />
+              <div className="text-left">
+                <div className="flex items-center gap-2 text-sm font-medium text-foreground group-hover:text-accent transition-colors">
+                  <BookOpen className="w-4 h-4" />
+                  Follow me on Goodreads
+                </div>
+                <p className="text-xs text-muted-foreground">See what I'm reading</p>
+              </div>
+            </a>
           </div>
           
           <div className="flex justify-center lg:justify-end">
