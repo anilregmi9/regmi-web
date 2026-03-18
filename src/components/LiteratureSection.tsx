@@ -2,6 +2,7 @@ import { Copy } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { toast } from "@/hooks/use-toast";
+import TravelogueSection from "@/components/TravelogueSection";
 
 const LiteratureSection = () => {
   const copyToClipboard = (text: string, title: string) => {
@@ -211,6 +212,13 @@ Then the white clouds turn dark, and still the moon remains hidden. I do not kno
             </div>
           </CardContent>
         </Card>
+        <Separator className="my-16" />
+
+        <div className="text-center mb-12">
+          <h3 className="text-3xl font-bold text-primary font-heading">Travelogues</h3>
+        </div>
+
+        <TravelogueSection />
       </div>
     </section>
   );
