@@ -2,6 +2,7 @@ import { Copy } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { toast } from "@/hooks/use-toast";
+import TravelogueSection from "@/components/TravelogueSection";
 
 const LiteratureSection = () => {
   const copyToClipboard = (text: string, title: string) => {
