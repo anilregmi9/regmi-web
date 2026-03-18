@@ -209,8 +209,14 @@ const TravelogueSection = () => {
             We returned after some while. During our return, there was a place where we sit for more than half an hour to watch the view of Syangja Bazar, Sataun, and the red cliff. There was a red cliff near the place we rested. The cliff was far more beautiful.
           </p>
 
+          <PlantGallery />
+
           <p className="text-justify">
-            I was quite sure about the name 'Kharsugaun' that the name was kept after the plant named "Kharsu'' and after searching on the internet I found that the plant is ''Quercus Leucotrichophora'' and is widely found in this area. I verified the tree name and got this conclusion. Also, the beautiful Kharsu peak is named after the village Kharsugaun as the closest residence of that peak is Kharsugaun. The local people use to call it 'Kharsu ko dada' i.e. the peak of Kharsu.
+            After this huge try to know about these plants, I found "Chutro" is called Blueberry and its scientific name is Vaccinium Corymbosum. The scientific name of ''Arubakhada'' is Chickasaw Palm, ''kafal'' is Rubus Ellipticus, ''Gholtapre'' is Centella Asiatica.
+          </p>
+
+          <p className="text-justify">
+            There is nothing I can describe except my enjoy seeing the views. The views were all clear while returning. The greenery was the most attractive part of the whole trip.
           </p>
 
           <p className="text-justify">
@@ -219,6 +225,10 @@ const TravelogueSection = () => {
 
           <p className="text-justify italic text-muted-foreground">
             Its nearer but people are thinking wider and their wideness do not cover the most interesting places near them. This might be the impact of globalization.
+          </p>
+
+          <p className="text-justify">
+            I was quite sure about the name 'Kharsugaun' that the name was kept after the plant named "Kharsu'' and after searching on the internet I found that the plant is ''Quercus Leucotrichophora'' and is widely found in this area. I verified the tree name and got this conclusion. Also, the beautiful Kharsu peak is named after the village Kharsugaun as the closest residence of that peak is Kharsugaun. The local people use to call it 'Kharsu ko dada' i.e. the peak of Kharsu.
           </p>
 
           <p className="text-justify">
