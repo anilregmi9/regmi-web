@@ -1,6 +1,7 @@
 import { Copy, ExternalLink } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { toast } from "@/hooks/use-toast";
+import PlantGallery from "./PlantGallery";
 
 const TravelogueSection = () => {
   const copyToClipboard = (text: string, title: string) => {
