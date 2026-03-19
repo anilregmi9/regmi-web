@@ -1,16 +1,44 @@
-import { Copy } from "lucide-react";
+import { useState } from "react";
+import { Copy, ChevronRight, BookOpen, Feather, MapPin } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { toast } from "@/hooks/use-toast";
 import TravelogueSection from "@/components/TravelogueSection";
 
+type LitItem = {
+  id: string;
+  title: string;
+  category: "poetry" | "essay" | "travelogue";
+  image: string;
+  imageAlt: string;
+};
+
+const items: LitItem[] = [
+  { id: "pokhara", title: "पोखरा", category: "poetry", image: "/lovable-uploads/pokhara-mountains.png", imageAlt: "Pokhara - Mountains and Lake" },
+  { id: "khadi", title: "खाडी", category: "poetry", image: "/lovable-uploads/arabian-desert.png", imageAlt: "Arabian Desert" },
+  { id: "message", title: "Message", category: "essay", image: "/lovable-uploads/sparrow-window.png", imageAlt: "Sparrow on window" },
+  { id: "oxymoron", title: "Oxymoron", category: "essay", image: "/lovable-uploads/sky-clouds.png", imageAlt: "Sky and clouds" },
+  { id: "thaple", title: "The sudden Thaple", category: "travelogue", image: "/lovable-uploads/thaple-panorama.png", imageAlt: "Thaple panoramic view" },
+];
+
+const categoryIcon = {
+  poetry: <Feather className="w-4 h-4" />,
+  essay: <BookOpen className="w-4 h-4" />,
+  travelogue: <MapPin className="w-4 h-4" />,
+};
+
+const categoryLabel = {
+  poetry: "Poetry",
+  essay: "Essay",
+  travelogue: "Travelogue",
+};
+
 const LiteratureSection = () => {
+  const [selected, setSelected] = useState<string | null>(null);
+
   const copyToClipboard = (text: string, title: string) => {
     navigator.clipboard.writeText(text);
-    toast({
-      title: "Copied!",
-      description: `"${title}" has been copied to clipboard.`,
-    });
+    toast({ title: "Copied!", description: `"${title}" has been copied to clipboard.` });
   };
 
   const poem1 = `हातमा तातो तम्बाखु बोकेर 
@@ -77,148 +105,130 @@ Eventually, the birds find their shelters. The trees on the hilltop shift from g
 
 Then the white clouds turn dark, and still the moon remains hidden. I do not know whether it will shine or not, but my hope remains strong. The moon waits for the clouds to clear and for the sun's influence to fade. I wait for the same. Our intentions are similar, but the time we are given is not. The moon may have billions of years to shine, while I am here only for a moment.`;
 
+  const contentMap: Record<string, React.ReactNode> = {
+    pokhara: (
+      <Card className="overflow-hidden shadow-earth animate-in fade-in slide-in-from-bottom-4 duration-500">
+        <div className="relative">
+          <img src="/lovable-uploads/pokhara-mountains.png" alt="Pokhara" className="w-full h-64 md:h-80 object-cover" />
+          <div className="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-2 py-1 rounded">Photo Credit: NTB</div>
+        </div>
+        <CardContent className="p-8 bg-gradient-to-b from-muted/30 to-background">
+          <div className="flex items-center justify-between mb-6">
+            <h3 className="text-2xl md:text-3xl font-bold text-primary font-heading">पोखरा</h3>
+            <button onClick={() => copyToClipboard(poem1, "पोखरा")} className="p-2 hover:bg-muted rounded-full transition-colors" title="Copy poem">
+              <Copy className="w-5 h-5 text-muted-foreground hover:text-primary" />
+            </button>
+          </div>
+          <div className="text-lg leading-relaxed text-foreground whitespace-pre-line font-serif italic">{poem1}</div>
+        </CardContent>
+      </Card>
+    ),
+    khadi: (
+      <Card className="overflow-hidden shadow-earth animate-in fade-in slide-in-from-bottom-4 duration-500">
+        <div className="relative">
+          <img src="/lovable-uploads/arabian-desert.png" alt="Arabian Desert" className="w-full h-64 md:h-80 object-cover" />
+        </div>
+        <CardContent className="p-8 bg-gradient-to-b from-muted/30 to-background">
+          <div className="flex items-center justify-between mb-6">
+            <h3 className="text-2xl md:text-3xl font-bold text-primary font-heading">खाडी</h3>
+            <button onClick={() => copyToClipboard(poem2, "खाडी")} className="p-2 hover:bg-muted rounded-full transition-colors" title="Copy poem">
+              <Copy className="w-5 h-5 text-muted-foreground hover:text-primary" />
+            </button>
+          </div>
+          <div className="text-lg leading-relaxed text-foreground whitespace-pre-line font-serif italic">{poem2}</div>
+        </CardContent>
+      </Card>
+    ),
+    message: (
+      <Card className="overflow-hidden shadow-earth animate-in fade-in slide-in-from-bottom-4 duration-500">
+        <div className="relative">
+          <img src="/lovable-uploads/sparrow-window.png" alt="Sparrow on window" className="w-full h-64 md:h-80 object-cover" />
+        </div>
+        <CardContent className="p-8 bg-gradient-to-b from-muted/30 to-background">
+          <div className="flex items-center justify-between mb-6">
+            <h3 className="text-2xl md:text-3xl font-bold text-primary font-heading">Message</h3>
+            <button onClick={() => copyToClipboard(essayMessage, "Message")} className="p-2 hover:bg-muted rounded-full transition-colors" title="Copy essay">
+              <Copy className="w-5 h-5 text-muted-foreground hover:text-primary" />
+            </button>
+          </div>
+          <div className="text-base leading-relaxed text-foreground/90 space-y-4 font-serif">
+            {essayMessage.split('\n\n').map((paragraph, index) => (
+              <p key={index} className="text-justify">{paragraph}</p>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+    ),
+    oxymoron: (
+      <Card className="overflow-hidden shadow-earth animate-in fade-in slide-in-from-bottom-4 duration-500">
+        <div className="relative">
+          <img src="/lovable-uploads/sky-clouds.png" alt="Sky and clouds" className="w-full h-64 md:h-80 object-cover" />
+        </div>
+        <CardContent className="p-8 bg-gradient-to-b from-muted/30 to-background">
+          <div className="flex items-center justify-between mb-6">
+            <h3 className="text-2xl md:text-3xl font-bold text-primary font-heading">Oxymoron</h3>
+            <button onClick={() => copyToClipboard(essayOxymoron, "Oxymoron")} className="p-2 hover:bg-muted rounded-full transition-colors" title="Copy essay">
+              <Copy className="w-5 h-5 text-muted-foreground hover:text-primary" />
+            </button>
+          </div>
+          <div className="text-base leading-relaxed text-foreground/90 font-serif text-justify">
+            {essayOxymoron.split('\n\n').map((paragraph, index) => (
+              <p key={index} className="mb-4">{paragraph}</p>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+    ),
+    thaple: (
+      <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+        <TravelogueSection />
+      </div>
+    ),
+  };
+
   return (
     <section id="literature" className="py-20 bg-gradient-to-b from-background to-muted/30">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4 font-heading">
-            Literature
-          </h2>
-          <p className="text-muted-foreground text-lg">Poetry & Essays</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4 font-heading">Literature</h2>
+          <p className="text-muted-foreground text-lg">Poetry, Essays & Travelogues</p>
           <Separator className="mt-6 max-w-xs mx-auto" />
         </div>
 
-        {/* Poem 1 - एक तरुण जस्तो */}
-        <Card className="mb-12 overflow-hidden shadow-earth hover:shadow-lg transition-shadow duration-300">
-          <div className="relative">
-            <img 
-              src="/lovable-uploads/pokhara-mountains.png" 
-              alt="Pokhara - Mountains and Lake"
-              className="w-full h-64 md:h-80 object-cover"
-            />
-            <div className="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-2 py-1 rounded">
-              Photo Credit: NTB
-            </div>
-          </div>
-          <CardContent className="p-8 bg-gradient-to-b from-earth-cream/50 to-background">
-            <div className="flex items-center justify-between mb-6">
-              <h3 className="text-2xl md:text-3xl font-bold text-primary font-heading">
-                पोखरा
-              </h3>
-              <button 
-                onClick={() => copyToClipboard(poem1, "पोखरा")}
-                className="p-2 hover:bg-muted rounded-full transition-colors"
-                title="Copy poem"
-              >
-                <Copy className="w-5 h-5 text-muted-foreground hover:text-primary" />
-              </button>
-            </div>
-            <div className="text-lg leading-relaxed text-foreground whitespace-pre-line font-serif italic">
-              {poem1}
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Poem 2 - घर गल्ली टोल छिमेक */}
-        <Card className="mb-12 overflow-hidden shadow-earth hover:shadow-lg transition-shadow duration-300">
-          <div className="relative">
-            <img 
-              src="/lovable-uploads/arabian-desert.png" 
-              alt="Arabian Desert - Golden sand dunes at sunset"
-              className="w-full h-64 md:h-80 object-cover"
-            />
-          </div>
-          <CardContent className="p-8 bg-gradient-to-b from-earth-orange/10 to-background">
-            <div className="flex items-center justify-between mb-6">
-              <h3 className="text-2xl md:text-3xl font-bold text-primary font-heading">
-                खाडी
-              </h3>
-              <button 
-                onClick={() => copyToClipboard(poem2, "खाडी")}
-                className="p-2 hover:bg-muted rounded-full transition-colors"
-                title="Copy poem"
-              >
-                <Copy className="w-5 h-5 text-muted-foreground hover:text-primary" />
-              </button>
-            </div>
-            <div className="text-lg leading-relaxed text-foreground whitespace-pre-line font-serif italic">
-              {poem2}
-            </div>
-          </CardContent>
-        </Card>
-
-        <Separator className="my-16" />
-
-        <div className="text-center mb-12">
-          <h3 className="text-3xl font-bold text-primary font-heading">Essays</h3>
+        {/* Title Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
+          {items.map((item) => (
+            <button
+              key={item.id}
+              onClick={() => setSelected(selected === item.id ? null : item.id)}
+              className={`group relative overflow-hidden rounded-xl text-left transition-all duration-300 border-2 ${
+                selected === item.id
+                  ? "border-primary shadow-lg scale-[1.02]"
+                  : "border-border hover:border-primary/50 hover:shadow-md"
+              }`}
+            >
+              <img
+                src={item.image}
+                alt={item.imageAlt}
+                className="w-full h-36 object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-4">
+                <div className="flex items-center gap-2 text-white/70 text-xs mb-1">
+                  {categoryIcon[item.category]}
+                  <span>{categoryLabel[item.category]}</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <h3 className="text-lg font-bold text-white font-heading">{item.title}</h3>
+                  <ChevronRight className={`w-5 h-5 text-white/70 transition-transform duration-300 ${selected === item.id ? "rotate-90" : ""}`} />
+                </div>
+              </div>
+            </button>
+          ))}
         </div>
 
-        {/* Essay - Message */}
-        <Card className="mb-12 overflow-hidden shadow-earth hover:shadow-lg transition-shadow duration-300">
-          <div className="relative">
-            <img 
-              src="/lovable-uploads/sparrow-window.png" 
-              alt="Sparrow on window - A bird silhouette against rainy window"
-              className="w-full h-64 md:h-80 object-cover"
-            />
-          </div>
-          <CardContent className="p-8 bg-gradient-to-b from-muted/50 to-background">
-            <div className="flex items-center justify-between mb-6">
-              <h3 className="text-2xl md:text-3xl font-bold text-primary font-heading">
-                Message
-              </h3>
-              <button 
-                onClick={() => copyToClipboard(essayMessage, "Message")}
-                className="p-2 hover:bg-muted rounded-full transition-colors"
-                title="Copy essay"
-              >
-                <Copy className="w-5 h-5 text-muted-foreground hover:text-primary" />
-              </button>
-            </div>
-            <div className="text-base leading-relaxed text-foreground/90 space-y-4 font-serif">
-              {essayMessage.split('\n\n').map((paragraph, index) => (
-                <p key={index} className="text-justify first-letter:text-3xl first-letter:font-bold first-letter:text-primary first-letter:float-left first-letter:mr-2">
-                  {paragraph}
-                </p>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Essay - Oxymoron */}
-        <Card className="overflow-hidden shadow-earth hover:shadow-lg transition-shadow duration-300">
-          <div className="relative">
-            <img 
-              src="/lovable-uploads/sky-clouds.png" 
-              alt="Sky and clouds - Peaceful blue sky"
-              className="w-full h-64 md:h-80 object-cover"
-            />
-          </div>
-          <CardContent className="p-8 bg-gradient-to-b from-blue-50/50 to-background dark:from-blue-950/20">
-            <div className="flex items-center justify-between mb-6">
-              <h3 className="text-2xl md:text-3xl font-bold text-primary font-heading">
-                Oxymoron
-              </h3>
-              <button 
-                onClick={() => copyToClipboard(essayOxymoron, "Oxymoron")}
-                className="p-2 hover:bg-muted rounded-full transition-colors"
-                title="Copy essay"
-              >
-                <Copy className="w-5 h-5 text-muted-foreground hover:text-primary" />
-              </button>
-            </div>
-            <div className="text-base leading-relaxed text-foreground/90 font-serif text-justify first-letter:text-4xl first-letter:font-bold first-letter:text-primary first-letter:float-left first-letter:mr-3 first-letter:leading-none">
-              {essayOxymoron}
-            </div>
-          </CardContent>
-        </Card>
-        <Separator className="my-16" />
-
-        <div className="text-center mb-12">
-          <h3 className="text-3xl font-bold text-primary font-heading">Travelogues</h3>
-        </div>
-
-        <TravelogueSection />
+        {/* Selected Content */}
+        {selected && contentMap[selected]}
       </div>
     </section>
   );
