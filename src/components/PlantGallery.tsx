@@ -19,6 +19,15 @@ const plants = [
   { name: "Phyllanthus Pulcher", src: "/lovable-uploads/plants/phyllanthus-pulcher.jpg" },
   { name: "Portulaca Pilosa", src: "/lovable-uploads/plants/portulaca-pilosa.jpg" },
   { name: "Quercus Leucotrichophora", src: "/lovable-uploads/plants/quercus-leucotrichophora.jpg" },
+  { name: "Berberis Aristata", src: "/lovable-uploads/plants/berberis-aristata.jpg" },
+  { name: "Artemisia Argyi", src: "/lovable-uploads/plants/artemisia-argyi.jpg" },
+  { name: "Viburnum Odoratissimum", src: "/lovable-uploads/plants/viburnum-odoratissimum.jpg" },
+  { name: "Viburnum Odoratissimum (Flower)", src: "/lovable-uploads/plants/viburnum-odoratissimum-1.jpg" },
+  { name: "Stephania Tetrandra", src: "/lovable-uploads/plants/stephania-tetrandra.jpg" },
+  { name: "Rhodomyrtus Tomentosa", src: "/lovable-uploads/plants/rhodomyrtus-tomentosa.jpg" },
+  { name: "Rubus Ellipticus", src: "/lovable-uploads/plants/rubus-ellipticus.jpg" },
+  { name: "Solanum Xanthocarpum", src: "/lovable-uploads/plants/solanum-xanthocarpum.jpg" },
+  { name: "Rumex Crispus", src: "/lovable-uploads/plants/rumex-crispus.jpg" },
 ];
 
 const PlantGallery = () => {
