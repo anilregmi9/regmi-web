@@ -212,7 +212,7 @@ const TravelogueSection = () => {
           <PlantGallery />
 
           <p className="text-justify">
-            After this huge try to know about these plants, I found "Chutro" is called Blueberry and its scientific name is Vaccinium Corymbosum. The scientific name of ''Arubakhada'' is Chickasaw Palm, ''kafal'' is Rubus Ellipticus, ''Gholtapre'' is Centella Asiatica.
+            After this huge try to know about these plants, I found "Chutro" is called Berberis Aristata. The scientific name of ''Arubakhada'' is Chickasaw Palm, ''kafal'' is Rubus Ellipticus, ''Gholtapre'' is Centella Asiatica.
           </p>
 
           <p className="text-justify">
