@@ -21,16 +21,14 @@ const items: LitItem[] = [
   { id: "banduk", title: "बन्दुक: द्वन्द्वदेखि दैनिकीसम्म", category: "essay", image: "/lovable-uploads/banduk-essay.jpg", imageAlt: "Farmer in corn field, mid-hills Nepal" },
 ];
 
-const categoryIcon = {
+const categoryIcon: Record<string, React.ReactNode> = {
   poetry: <Feather className="w-4 h-4" />,
   essay: <BookOpen className="w-4 h-4" />,
-  travelogue: <MapPin className="w-4 h-4" />,
 };
 
-const categoryLabel = {
+const categoryLabel: Record<string, string> = {
   poetry: "Poetry",
   essay: "Essay",
-  travelogue: "Travelogue",
 };
 
 const LiteratureSection = () => {
