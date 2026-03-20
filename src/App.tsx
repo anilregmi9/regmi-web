@@ -11,6 +11,7 @@ import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import Literature from "./pages/Literature";
+import MyNepal from "./pages/MyNepal";
 import Photos from "./pages/Photos";
 import NotFound from "./pages/NotFound";
 
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/literature" element={<Literature />} />
+          <Route path="/my-nepal" element={<MyNepal />} />
           <Route path="/photos" element={<Photos />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
