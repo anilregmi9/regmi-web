@@ -11,6 +11,7 @@ import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import Literature from "./pages/Literature";
+import MyNepal from "./pages/MyNepal";
 import Photos from "./pages/Photos";
 import NotFound from "./pages/NotFound";
 
