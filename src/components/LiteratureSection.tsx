@@ -1,9 +1,8 @@
 import { useState } from "react";
-import { Copy, ChevronRight, BookOpen, Feather, MapPin } from "lucide-react";
+import { Copy, ChevronRight, BookOpen, Feather } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { toast } from "@/hooks/use-toast";
-import TravelogueSection from "@/components/TravelogueSection";
 
 type LitItem = {
   id: string;
@@ -20,19 +19,16 @@ const items: LitItem[] = [
   { id: "oxymoron", title: "Oxymoron", category: "essay", image: "/lovable-uploads/sky-clouds.png", imageAlt: "Sky and clouds" },
   { id: "achanakKheleko", title: "अचानक खेलेको कुरा", category: "essay", image: "/lovable-uploads/seti-hydropower-camp.jpg", imageAlt: "Seti river hydropower camp" },
   { id: "banduk", title: "बन्दुक: द्वन्द्वदेखि दैनिकीसम्म", category: "essay", image: "/lovable-uploads/banduk-essay.jpg", imageAlt: "Farmer in corn field, mid-hills Nepal" },
-  { id: "thaple", title: "The sudden Thaple", category: "travelogue", image: "/lovable-uploads/thaple-panorama.png", imageAlt: "Thaple panoramic view" },
 ];
 
-const categoryIcon = {
+const categoryIcon: Record<string, React.ReactNode> = {
   poetry: <Feather className="w-4 h-4" />,
   essay: <BookOpen className="w-4 h-4" />,
-  travelogue: <MapPin className="w-4 h-4" />,
 };
 
-const categoryLabel = {
+const categoryLabel: Record<string, string> = {
   poetry: "Poetry",
   essay: "Essay",
-  travelogue: "Travelogue",
 };
 
 const LiteratureSection = () => {
@@ -305,11 +301,6 @@ Then the white clouds turn dark, and still the moon remains hidden. I do not kno
         </CardContent>
       </Card>
     ),
-    thaple: (
-      <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-        <TravelogueSection />
-      </div>
-    ),
   };
 
   return (
@@ -317,7 +308,7 @@ Then the white clouds turn dark, and still the moon remains hidden. I do not kno
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4 font-heading">Literature</h2>
-          <p className="text-muted-foreground text-lg">Poetry, Essays & Travelogues</p>
+          <p className="text-muted-foreground text-lg">Poetry & Essays</p>
           <Separator className="mt-6 max-w-xs mx-auto" />
         </div>
 
