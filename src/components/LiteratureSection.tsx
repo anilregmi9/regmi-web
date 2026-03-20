@@ -308,7 +308,7 @@ Then the white clouds turn dark, and still the moon remains hidden. I do not kno
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4 font-heading">Literature</h2>
-          <p className="text-muted-foreground text-lg">Poetry, Essays & Travelogues</p>
+          <p className="text-muted-foreground text-lg">Poetry & Essays</p>
           <Separator className="mt-6 max-w-xs mx-auto" />
         </div>
 
