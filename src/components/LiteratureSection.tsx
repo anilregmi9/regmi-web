@@ -301,11 +301,6 @@ Then the white clouds turn dark, and still the moon remains hidden. I do not kno
         </CardContent>
       </Card>
     ),
-    thaple: (
-      <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-        <TravelogueSection />
-      </div>
-    ),
   };
 
   return (
