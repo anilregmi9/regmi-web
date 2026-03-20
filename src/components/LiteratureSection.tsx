@@ -284,6 +284,27 @@ Then the white clouds turn dark, and still the moon remains hidden. I do not kno
         </CardContent>
       </Card>
     ),
+    banduk: (
+      <Card className="overflow-hidden shadow-earth animate-in fade-in slide-in-from-bottom-4 duration-500">
+        <div className="relative">
+          <img src="/lovable-uploads/banduk-essay.jpg" alt="Farmer in corn field, mid-hills Nepal" className="w-full h-64 md:h-80 object-cover" />
+        </div>
+        <CardContent className="p-8 bg-gradient-to-b from-muted/30 to-background">
+          <div className="flex items-center justify-between mb-2">
+            <h3 className="text-2xl md:text-3xl font-bold text-primary font-heading">बन्दुक: द्वन्द्वदेखि दैनिकीसम्म</h3>
+            <button onClick={() => copyToClipboard(essayBanduk, "बन्दुक: द्वन्द्वदेखि दैनिकीसम्म")} className="p-2 hover:bg-muted rounded-full transition-colors" title="Copy essay">
+              <Copy className="w-5 h-5 text-muted-foreground hover:text-primary" />
+            </button>
+          </div>
+          <p className="text-xs text-muted-foreground mb-6">July 17, 2020</p>
+          <div className="text-base leading-relaxed text-foreground/90 font-serif text-justify">
+            {essayBanduk.split('\n\n').map((paragraph, index) => (
+              <p key={index} className="mb-4">{paragraph}</p>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+    ),
     thaple: (
       <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
         <TravelogueSection />
