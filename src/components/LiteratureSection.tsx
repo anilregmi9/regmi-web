@@ -1,9 +1,8 @@
 import { useState } from "react";
-import { Copy, ChevronRight, BookOpen, Feather, MapPin } from "lucide-react";
+import { Copy, ChevronRight, BookOpen, Feather } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { toast } from "@/hooks/use-toast";
-import TravelogueSection from "@/components/TravelogueSection";
 
 type LitItem = {
   id: string;
