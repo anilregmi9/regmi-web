@@ -19,7 +19,6 @@ const items: LitItem[] = [
   { id: "oxymoron", title: "Oxymoron", category: "essay", image: "/lovable-uploads/sky-clouds.png", imageAlt: "Sky and clouds" },
   { id: "achanakKheleko", title: "अचानक खेलेको कुरा", category: "essay", image: "/lovable-uploads/seti-hydropower-camp.jpg", imageAlt: "Seti river hydropower camp" },
   { id: "banduk", title: "बन्दुक: द्वन्द्वदेखि दैनिकीसम्म", category: "essay", image: "/lovable-uploads/banduk-essay.jpg", imageAlt: "Farmer in corn field, mid-hills Nepal" },
-  { id: "thaple", title: "The sudden Thaple", category: "travelogue", image: "/lovable-uploads/thaple-panorama.png", imageAlt: "Thaple panoramic view" },
 ];
 
 const categoryIcon = {
