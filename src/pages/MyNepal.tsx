@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import TravelogueSection from "@/components/TravelogueSection";
+import MardiTravelogue from "@/components/MardiTravelogue";
 import { Mountain } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
@@ -19,7 +20,10 @@ const MyNepal = () => {
               <Separator className="mt-6 max-w-xs mx-auto" />
             </div>
 
-            <TravelogueSection />
+            <div className="space-y-12">
+              <TravelogueSection />
+              <MardiTravelogue />
+            </div>
           </div>
         </section>
       </div>
