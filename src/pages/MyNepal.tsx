@@ -2,6 +2,7 @@ import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import TravelogueSection from "@/components/TravelogueSection";
 import MardiTravelogue from "@/components/MardiTravelogue";
+import TinpipleTravelogue from "@/components/TinpipleTravelogue";
 import { Mountain, ChevronRight, ArrowLeft } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { Card } from "@/components/ui/card";
@@ -28,6 +29,13 @@ const items: TravelItem[] = [
     subtitle: "A trek to Mardi Base Camp (4500m)",
     image: "/lovable-uploads/mardi-group.jpg",
     imageAlt: "Group photo at Mardi Base Camp",
+  },
+  {
+    id: "tinpiple",
+    title: "Tinpiple – Tarkeshwar – Gurje Bhanjyang – Jhor",
+    subtitle: "A hike with Wondervibes in Kathmandu hills",
+    image: "/lovable-uploads/tinpiple-hero.jpg",
+    imageAlt: "Forest trail on the way to Tarkeshwar",
   },
 ];
 
@@ -91,6 +99,7 @@ const MyNepal = () => {
 
                 {selected === "thaple" && <TravelogueSection />}
                 {selected === "mardi" && <MardiTravelogue />}
+                {selected === "tinpiple" && <TinpipleTravelogue />}
               </div>
             )}
           </div>
