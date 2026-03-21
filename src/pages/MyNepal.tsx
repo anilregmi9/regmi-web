@@ -99,6 +99,7 @@ const MyNepal = () => {
 
                 {selected === "thaple" && <TravelogueSection />}
                 {selected === "mardi" && <MardiTravelogue />}
+                {selected === "tinpiple" && <TinpipleTravelogue />}
               </div>
             )}
           </div>
