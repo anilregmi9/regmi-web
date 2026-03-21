@@ -2,6 +2,7 @@ import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import TravelogueSection from "@/components/TravelogueSection";
 import MardiTravelogue from "@/components/MardiTravelogue";
+import TinpipleTravelogue from "@/components/TinpipleTravelogue";
 import { Mountain, ChevronRight, ArrowLeft } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { Card } from "@/components/ui/card";
