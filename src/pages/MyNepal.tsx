@@ -26,7 +26,7 @@ const items: TravelItem[] = [
   {
     id: "mardi",
     title: "Mardi with Friends",
-    subtitle: "A trek to Mardi Base Camp (4500m)",
+    subtitle: "November 2017 · A trek to Mardi Base Camp (4500m)",
     image: "/lovable-uploads/mardi-group.jpg",
     imageAlt: "Group photo at Mardi Base Camp",
   },
