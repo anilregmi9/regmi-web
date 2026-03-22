@@ -337,7 +337,10 @@ Then the white clouds turn dark, and still the moon remains hidden. I do not kno
                   <span>{categoryLabel[item.category]}</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <h3 className="text-lg font-bold text-white font-heading">{item.title}</h3>
+                  <div>
+                    <h3 className="text-lg font-bold text-white font-heading">{item.title}</h3>
+                    {item.subtitle && <p className="text-white/60 text-xs mt-0.5">{item.subtitle}</p>}
+                  </div>
                   <ChevronRight className={`w-5 h-5 text-white/70 transition-transform duration-300 ${selected === item.id ? "rotate-90" : ""}`} />
                 </div>
               </div>
