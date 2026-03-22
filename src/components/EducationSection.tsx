@@ -16,22 +16,16 @@ const EducationSection = () => {
       description: "Foundational studies in geology and earth sciences"
     },
     {
-      degree: "+2 Science",
+      degree: "+2 Science (Mathematics, Physics, Chemistry)",
       institution: "Roshani English Boarding School, Putalibazar-1, Syangja",
-      year: "",
+      year: "2012",
       description: "Science stream with Mathematics, Physics and Chemistry"
     },
     {
-      degree: "High School (Secondary)",
+      degree: "Primary & Secondary School",
       institution: "Roshani English Boarding School, Putalibazar-1, Syangja",
-      year: "",
-      description: "Secondary level education"
-    },
-    {
-      degree: "Primary School",
-      institution: "Roshani English Boarding School, Putalibazar-1, Syangja",
-      year: "",
-      description: "Primary level education"
+      year: "2000–2012",
+      description: "Primary and secondary level education"
     }
   ];
 
