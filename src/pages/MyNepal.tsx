@@ -33,7 +33,7 @@ const items: TravelItem[] = [
   {
     id: "tinpiple",
     title: "Tinpiple – Tarkeshwar – Gurje Bhanjyang – Jhor",
-    subtitle: "A hike with Wondervibes in Kathmandu hills",
+    subtitle: "June 27, 2017 · A hike with Wondervibes in Kathmandu hills",
     image: "/lovable-uploads/tinpiple-hero.jpg",
     imageAlt: "Forest trail on the way to Tarkeshwar",
   },
