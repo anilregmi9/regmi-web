@@ -7,18 +7,19 @@ import { toast } from "@/hooks/use-toast";
 type LitItem = {
   id: string;
   title: string;
+  subtitle?: string;
   category: "poetry" | "essay" | "travelogue";
   image: string;
   imageAlt: string;
 };
 
 const items: LitItem[] = [
-  { id: "pokhara", title: "पोखरा", category: "poetry", image: "/lovable-uploads/pokhara-mountains.png", imageAlt: "Pokhara - Mountains and Lake" },
-  { id: "khadi", title: "खाडी", category: "poetry", image: "/lovable-uploads/arabian-desert.png", imageAlt: "Arabian Desert" },
-  { id: "message", title: "Message", category: "essay", image: "/lovable-uploads/sparrow-window.png", imageAlt: "Sparrow on window" },
-  { id: "oxymoron", title: "Oxymoron", category: "essay", image: "/lovable-uploads/sky-clouds.png", imageAlt: "Sky and clouds" },
-  { id: "achanakKheleko", title: "अचानक खेलेको कुरा", category: "essay", image: "/lovable-uploads/seti-hydropower-camp.jpg", imageAlt: "Seti river hydropower camp" },
-  { id: "banduk", title: "बन्दुक: द्वन्द्वदेखि दैनिकीसम्म", category: "essay", image: "/lovable-uploads/banduk-essay.jpg", imageAlt: "Farmer in corn field, mid-hills Nepal" },
+  { id: "pokhara", title: "पोखरा", subtitle: "October 2021", category: "poetry", image: "/lovable-uploads/pokhara-mountains.png", imageAlt: "Pokhara - Mountains and Lake" },
+  { id: "khadi", title: "खाडी", subtitle: "November 2020", category: "poetry", image: "/lovable-uploads/arabian-desert.png", imageAlt: "Arabian Desert" },
+  { id: "message", title: "Message", subtitle: "June 26, 2020", category: "essay", image: "/lovable-uploads/sparrow-window.png", imageAlt: "Sparrow on window" },
+  { id: "oxymoron", title: "Oxymoron", subtitle: "March 2020", category: "essay", image: "/lovable-uploads/sky-clouds.png", imageAlt: "Sky and clouds" },
+  { id: "achanakKheleko", title: "अचानक खेलेको कुरा", subtitle: "November 2020", category: "essay", image: "/lovable-uploads/seti-hydropower-camp.jpg", imageAlt: "Seti river hydropower camp" },
+  { id: "banduk", title: "बन्दुक: द्वन्द्वदेखि दैनिकीसम्म", subtitle: "July 17, 2020", category: "essay", image: "/lovable-uploads/banduk-essay.jpg", imageAlt: "Farmer in corn field, mid-hills Nepal" },
 ];
 
 const categoryIcon: Record<string, React.ReactNode> = {
