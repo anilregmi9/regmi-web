@@ -56,10 +56,12 @@ const EducationSection = () => {
                   <div className="flex-1">
                     <CardTitle className="text-xl text-primary mb-2">{edu.degree}</CardTitle>
                     <h3 className="font-semibold text-foreground mb-2">{edu.institution}</h3>
-                    <div className="flex items-center gap-2 text-muted-foreground">
-                      <Calendar className="w-4 h-4" />
-                      <span>Graduated: {edu.year}</span>
-                    </div>
+                    {edu.year && (
+                      <div className="flex items-center gap-2 text-muted-foreground">
+                        <Calendar className="w-4 h-4" />
+                        <span>Graduated: {edu.year}</span>
+                      </div>
+                    )}
                   </div>
                 </div>
               </CardHeader>
