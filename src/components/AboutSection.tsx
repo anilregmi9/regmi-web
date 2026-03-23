@@ -23,6 +23,18 @@ const AboutSection = () => {
       institution: "Tri-Chandra Multiple Campus",
       year: "2017",
       description: "Foundational studies in geology and earth sciences"
+    },
+    {
+      degree: "+2 Science (Mathematics, Physics, Chemistry)",
+      institution: "Roshani English Boarding School, Putalibazar-1, Syangja",
+      year: "2012",
+      description: "Science stream with Mathematics, Physics and Chemistry"
+    },
+    {
+      degree: "Primary & Secondary School",
+      institution: "Roshani English Boarding School, Putalibazar-1, Syangja",
+      year: "2000–2012",
+      description: "Primary and secondary level education"
     }
   ];
 
