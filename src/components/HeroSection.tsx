@@ -91,39 +91,44 @@ const HeroSection = () => {
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
         <ChevronDown className="w-6 h-6 text-muted-foreground animate-bounce" />
       </div>
+    </section>
 
-      {/* Photo Highlights */}
-      <div className="absolute bottom-0 left-0 right-0 translate-y-full">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="group relative overflow-hidden rounded-2xl shadow-earth">
-              <img 
-                src="/lovable-uploads/syangja-night.jpeg" 
-                alt="Syangja town at night with colorful lights"
-                className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4 text-white">
-                <h3 className="font-semibold text-lg">Syangja by Night</h3>
-                <p className="text-sm text-white/80">My hometown glowing under the evening sky — where it all began</p>
-              </div>
+    {/* Photo Highlights */}
+    <section className="py-16 bg-background">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="group relative overflow-hidden rounded-2xl shadow-earth">
+            <img 
+              src="/lovable-uploads/syangja-night.jpeg" 
+              alt="Syangja town at night with colorful lights"
+              className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+            <div className="absolute bottom-4 left-4 right-4 text-white">
+              <h3 className="font-semibold text-lg">Syangja by Night</h3>
+              <p className="text-sm text-white/80">My hometown glowing under the evening sky — where it all began</p>
             </div>
-            <div className="group relative overflow-hidden rounded-2xl shadow-earth">
-              <img 
-                src="/lovable-uploads/palpa-fieldwork.jpg" 
-                alt="Anil Regmi during geological fieldwork in Palpa with local children"
-                className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4 text-white">
-                <h3 className="font-semibold text-lg">Fieldwork in Palpa</h3>
-                <p className="text-sm text-white/80">Moments from a college geological field trip in Palpa District</p>
-              </div>
+          </div>
+          <div className="group relative overflow-hidden rounded-2xl shadow-earth">
+            <img 
+              src="/lovable-uploads/palpa-fieldwork.jpg" 
+              alt="Anil Regmi during geological fieldwork in Palpa with local children"
+              className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+            <div className="absolute bottom-4 left-4 right-4 text-white">
+              <h3 className="font-semibold text-lg">Fieldwork in Palpa</h3>
+              <p className="text-sm text-white/80">Moments from a college geological field trip in Palpa District</p>
             </div>
           </div>
         </div>
       </div>
     </section>
+  </>
+  );
+};
+
+export default HeroSection;
   );
 };
 
