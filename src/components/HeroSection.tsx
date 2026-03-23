@@ -4,6 +4,7 @@ import { ChevronDown, BookOpen, Linkedin } from "lucide-react";
 
 const HeroSection = () => {
   return (
+    <>
     <section id="home" className="min-h-screen flex items-center justify-center relative gradient-subtle">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
