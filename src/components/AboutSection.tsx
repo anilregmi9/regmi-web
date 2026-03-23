@@ -140,7 +140,7 @@ const AboutSection = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">About Me</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            I am a geologist engaged in the exploration of mineral resources.
+            Born and raised in Syangja, a small town in central Nepal, I am a geologist passionate about the exploration and sustainable development of mineral resources.
           </p>
         </div>
 
