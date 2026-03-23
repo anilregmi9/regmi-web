@@ -140,7 +140,7 @@ const AboutSection = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">About Me</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            I am a geologist engaged in the exploration of mineral resources.
+            Born and raised in Syangja, a small town in central Nepal, I am a geologist passionate about the exploration and sustainable development of mineral resources.
           </p>
         </div>
 
@@ -194,16 +194,13 @@ const AboutSection = () => {
           
           <div className="space-y-6">
             <p className="text-muted-foreground leading-relaxed">
-              My work encompasses geological, hydrogeological, and geotechnical investigations 
-              supporting a wide range of engineering projects, including hydropower development, 
-              road construction, mining activities, and various infrastructure works.
+              I hold a Master's degree in Geology from Tribhuvan University, Nepal, and have developed a strong foundation in earth sciences through both academic study and extensive fieldwork. Currently, I am working in Australia as a logging geologist, focusing on geological logging and subsurface data interpretation. My primary interest lies in the exploration of metallic minerals.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              My career goal is to develop a sustainable metallic mining industry in Nepal while 
-              contributing to efficient and environmentally responsible infrastructure development. 
-              As a geologist, I aim to apply my expertise in geological, hydrogeological, and 
-              geotechnical studies to support projects like hydropower, road construction, and 
-              mining, ensuring both economic growth and environmental conservation.
+              I have gained diverse experience across multiple geological disciplines, including prospecting and exploration of metallic minerals, as well as geotechnical investigations for major infrastructure projects such as hydropower development, road construction, and mining activities.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              I have also worked as a field hydrogeologist in the foreland basin of the Nepal Himalaya, where I started my career. There, I conducted borehole drilling, analysis of groundwater conditions, water table assessment, transmissivity evaluation, and pump testing, along with slug tests for aquifer characterization. Additionally, I have worked as a freelance geologist on disaster risk assessments related to landslides and earthquakes. With a strong combination of technical expertise, field adaptability, and analytical skills, I aim to continue growing in the mining and exploration sector.
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
