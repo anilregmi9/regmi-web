@@ -1,8 +1,31 @@
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Camera, FolderOpen } from "lucide-react";
+import { Camera, FolderOpen, ArrowLeft, X } from "lucide-react";
+
+interface PhotoAlbum {
+  title: string;
+  description: string;
+  coverImage: string;
+  photoCount: number;
+  photos?: string[];
+}
 
 const PhotosSection = () => {
-  const photoAlbums = [
+  const [selectedAlbum, setSelectedAlbum] = useState<PhotoAlbum | null>(null);
+  const [lightboxImage, setLightboxImage] = useState<string | null>(null);
+
+  const photoAlbums: PhotoAlbum[] = [
+    {
+      title: "Palpa Field Work – Trichandra Campus 2070",
+      description: "Geological field work at Palpa district with Trichandra Campus batch of 2070 BS",
+      coverImage: "/lovable-uploads/palpa-fieldwork-1.jpg",
+      photoCount: 3,
+      photos: [
+        "/lovable-uploads/palpa-fieldwork-1.jpg",
+        "/lovable-uploads/palpa-fieldwork-2.jpg",
+        "/lovable-uploads/palpa-fieldwork-3.jpg",
+      ]
+    },
     {
       title: "Field Expeditions",
       description: "Geological field work and expeditions across Nepal",
@@ -29,6 +52,58 @@ const PhotosSection = () => {
     }
   ];
 
+  if (selectedAlbum && selectedAlbum.photos && selectedAlbum.photos.length > 0) {
+    return (
+      <section className="py-20 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <button
+            onClick={() => setSelectedAlbum(null)}
+            className="flex items-center gap-2 text-primary hover:underline mb-8"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            Back to Albums
+          </button>
+          <h1 className="text-3xl font-bold mb-2">{selectedAlbum.title}</h1>
+          <p className="text-muted-foreground mb-8">{selectedAlbum.description}</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {selectedAlbum.photos.map((photo, index) => (
+              <div
+                key={index}
+                className="aspect-[4/3] overflow-hidden rounded-lg cursor-pointer group"
+                onClick={() => setLightboxImage(photo)}
+              >
+                <img
+                  src={photo}
+                  alt={`${selectedAlbum.title} - Photo ${index + 1}`}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {lightboxImage && (
+          <div
+            className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+            onClick={() => setLightboxImage(null)}
+          >
+            <button
+              className="absolute top-4 right-4 text-white hover:text-primary"
+              onClick={() => setLightboxImage(null)}
+            >
+              <X className="w-8 h-8" />
+            </button>
+            <img
+              src={lightboxImage}
+              alt="Full view"
+              className="max-w-full max-h-[90vh] object-contain"
+            />
+          </div>
+        )}
+      </section>
+    );
+  }
+
   return (
     <section className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -44,13 +119,14 @@ const PhotosSection = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {photoAlbums.map((album, index) => (
-            <Card 
-              key={index} 
+            <Card
+              key={index}
               className="shadow-soft hover:shadow-earth transition-all duration-300 group cursor-pointer overflow-hidden"
+              onClick={() => album.photos && album.photos.length > 0 ? setSelectedAlbum(album) : undefined}
             >
               <div className="aspect-square overflow-hidden relative">
-                <img 
-                  src={album.coverImage} 
+                <img
+                  src={album.coverImage}
                   alt={album.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
