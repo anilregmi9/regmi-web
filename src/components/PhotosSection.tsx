@@ -19,11 +19,21 @@ const PhotosSection = () => {
       title: "Palpa Field Work – Trichandra Campus 2070",
       description: "Geological field work at Palpa district with Trichandra Campus batch of 2070 BS",
       coverImage: "/lovable-uploads/palpa-fieldwork-1.jpg",
-      photoCount: 3,
+      photoCount: 13,
       photos: [
         "/lovable-uploads/palpa-fieldwork-1.jpg",
         "/lovable-uploads/palpa-fieldwork-2.jpg",
         "/lovable-uploads/palpa-fieldwork-3.jpg",
+        "/lovable-uploads/palpa-fieldwork-4.jpg",
+        "/lovable-uploads/palpa-fieldwork-5.jpg",
+        "/lovable-uploads/palpa-fieldwork-6.jpg",
+        "/lovable-uploads/palpa-fieldwork-7.jpg",
+        "/lovable-uploads/palpa-fieldwork-8.jpg",
+        "/lovable-uploads/palpa-fieldwork-9.jpg",
+        "/lovable-uploads/palpa-fieldwork-10.jpg",
+        "/lovable-uploads/palpa-fieldwork-11.jpg",
+        "/lovable-uploads/palpa-fieldwork-12.jpg",
+        "/lovable-uploads/palpa-fieldwork-13.jpg",
       ]
     },
     {
