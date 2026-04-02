@@ -203,22 +203,6 @@ const AboutSection = () => {
               I have also worked as a field hydrogeologist in the foreland basin of the Nepal Himalaya, where I started my career. There, I conducted borehole drilling, analysis of groundwater conditions, water table assessment, transmissivity evaluation, and pump testing, along with slug tests for aquifer characterization. Additionally, I have worked as a freelance geologist on disaster risk assessments related to landslides and earthquakes. With a strong combination of technical expertise, field adaptability, and analytical skills, I aim to continue growing in the mining and exploration sector.
             </p>
 
-            {/* Partner Section */}
-            <div className="mt-8 p-6 rounded-2xl bg-accent/5 border border-accent/20">
-              <div className="flex flex-col sm:flex-row gap-6 items-center sm:items-start">
-                <img
-                  src="/lovable-uploads/manjushree.jpg"
-                  alt="Anil and Manju Shree"
-                  className="w-40 h-40 rounded-xl object-cover shadow-lg flex-shrink-0"
-                />
-                <div>
-                  <h4 className="text-lg font-semibold text-primary mb-2">Manju Shree Thakur — My Partner & The Heart of My Journey</h4>
-                  <p className="text-muted-foreground leading-relaxed text-sm">
-                    We first met at Trichandra Campus in Kathmandu, where a simple connection quietly grew into something lifelong. From those early days to our marriage on 12th February 2024, every step has felt meaningful with her by my side. Now in Sydney, she continues to inspire me as she pursues her Master's in Research, driven by her passion for environmental science and her vision for a better world. She is not only incredibly intelligent and dedicated, but also truly beautiful — inside and out. Life with her feels like a story still unfolding, and I'm grateful for every chapter we write together.
-                  </p>
-                </div>
-              </div>
-            </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
               <Card 
