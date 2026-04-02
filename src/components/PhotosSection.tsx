@@ -24,6 +24,16 @@ const PhotosSection = () => {
         "/lovable-uploads/palpa-fieldwork-1.jpg",
         "/lovable-uploads/palpa-fieldwork-2.jpg",
         "/lovable-uploads/palpa-fieldwork-3.jpg",
+        "/lovable-uploads/palpa-fieldwork-4.jpg",
+        "/lovable-uploads/palpa-fieldwork-5.jpg",
+        "/lovable-uploads/palpa-fieldwork-6.jpg",
+        "/lovable-uploads/palpa-fieldwork-7.jpg",
+        "/lovable-uploads/palpa-fieldwork-8.jpg",
+        "/lovable-uploads/palpa-fieldwork-9.jpg",
+        "/lovable-uploads/palpa-fieldwork-10.jpg",
+        "/lovable-uploads/palpa-fieldwork-11.jpg",
+        "/lovable-uploads/palpa-fieldwork-12.jpg",
+        "/lovable-uploads/palpa-fieldwork-13.jpg",
       ]
     },
     {
