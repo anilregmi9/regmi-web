@@ -19,7 +19,7 @@ const PhotosSection = () => {
       title: "Palpa Field Work – Trichandra Campus 2070",
       description: "Geological field work at Palpa district with Trichandra Campus batch of 2070 BS",
       coverImage: "/lovable-uploads/palpa-fieldwork-1.jpg",
-      photoCount: 3,
+      photoCount: 13,
       photos: [
         "/lovable-uploads/palpa-fieldwork-1.jpg",
         "/lovable-uploads/palpa-fieldwork-2.jpg",
