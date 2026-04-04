@@ -442,29 +442,41 @@ const AboutSection = () => {
           </div>
         )}
 
-        {/* Partner Section - Below all other sections */}
-        <div className="mt-16 p-8 rounded-2xl bg-accent/5 border border-accent/20">
-          <h3 className="text-3xl font-bold text-center mb-8">Manju Shree Thakur — My Partner & The Heart of My Journey</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-            <img
-              src="/lovable-uploads/manjushree.jpg"
-              alt="Anil and Manju Shree"
-              className="w-full h-64 rounded-xl object-cover shadow-lg"
-            />
-            <img
-              src="/lovable-uploads/manjushree-wedding1.jpg"
-              alt="Anil and Manju Shree - Wedding moment"
-              className="w-full h-64 rounded-xl object-cover shadow-lg"
-            />
-            <img
-              src="/lovable-uploads/manjushree-wedding2.jpg"
-              alt="Anil and Manju Shree - Wedding ceremony"
-              className="w-full h-64 rounded-xl object-cover shadow-lg"
-            />
+        {/* Partner Section - Collapsible */}
+        <div className="mt-16">
+          <div 
+            className="p-6 rounded-2xl bg-accent/5 border border-accent/20 cursor-pointer hover:bg-accent/10 transition-colors"
+            onClick={() => setPartnerOpen(!partnerOpen)}
+          >
+            <div className="flex items-center justify-between">
+              <h3 className="text-2xl md:text-3xl font-bold text-center flex-1">Manju Shree Thakur — My Partner & The Heart of My Journey</h3>
+              <ChevronDown className={`w-6 h-6 text-muted-foreground transition-transform flex-shrink-0 ${partnerOpen ? 'rotate-180' : ''}`} />
+            </div>
           </div>
-          <p className="text-muted-foreground leading-relaxed max-w-4xl mx-auto text-center">
-            We first met at Trichandra Campus in Kathmandu, where a simple connection quietly grew into something lifelong. From those early days to our marriage on 12th February 2024, every step has felt meaningful with her by my side. Now in Sydney, she continues to inspire me as she pursues her Master's in Research, driven by her passion for environmental science and her vision for a better world. She is not only incredibly intelligent and dedicated, but also truly beautiful — inside and out. Life with her feels like a story still unfolding, and I'm grateful for every chapter we write together.
-          </p>
+          {partnerOpen && (
+            <div className="mt-4 p-8 rounded-2xl bg-accent/5 border border-accent/20 animate-in fade-in slide-in-from-top-4 duration-300">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                <img
+                  src="/lovable-uploads/manjushree.jpg"
+                  alt="Anil and Manju Shree"
+                  className="w-full h-64 rounded-xl object-cover shadow-lg"
+                />
+                <img
+                  src="/lovable-uploads/manjushree-wedding1.jpg"
+                  alt="Anil and Manju Shree - Wedding moment"
+                  className="w-full h-64 rounded-xl object-cover shadow-lg"
+                />
+                <img
+                  src="/lovable-uploads/manjushree-wedding2.jpg"
+                  alt="Anil and Manju Shree - Wedding ceremony"
+                  className="w-full h-64 rounded-xl object-cover shadow-lg"
+                />
+              </div>
+              <p className="text-muted-foreground leading-relaxed max-w-4xl mx-auto text-center">
+                We first met at Trichandra Campus in Kathmandu, where a simple connection quietly grew into something lifelong. From those early days to our marriage on 12th February 2024, every step has felt meaningful with her by my side. Now in Sydney, she continues to inspire me as she pursues her Master's in Research, driven by her passion for environmental science and her vision for a better world. She is not only incredibly intelligent and dedicated, but also truly beautiful — inside and out. Life with her feels like a story still unfolding, and I'm grateful for every chapter we write together.
+              </p>
+            </div>
+          )}
         </div>
       </div>
 
