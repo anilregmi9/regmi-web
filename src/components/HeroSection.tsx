@@ -25,7 +25,7 @@ const HeroSection = () => {
                 <Link to="/contact">Get in Touch</Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link to="/about">Learn More</Link>
+                <a href="#about">Learn More</a>
               </Button>
             </div>
             
