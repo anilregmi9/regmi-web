@@ -12,6 +12,7 @@ interface PhotoAlbum {
 }
 
 const PhotosSection = () => {
+  const [searchParams] = useSearchParams();
   const [selectedAlbum, setSelectedAlbum] = useState<PhotoAlbum | null>(null);
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
 
