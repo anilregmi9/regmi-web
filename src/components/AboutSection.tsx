@@ -10,6 +10,7 @@ const AboutSection = () => {
   const [isLensDialogOpen, setIsLensDialogOpen] = useState(false);
   const [isGpsDialogOpen, setIsGpsDialogOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<"education" | "experience" | "expertise" | null>(null);
+  const [partnerOpen, setPartnerOpen] = useState(false);
 
   const education = [
     {
