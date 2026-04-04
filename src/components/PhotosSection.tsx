@@ -73,6 +73,14 @@ const PhotosSection = () => {
     }
   ];
 
+  useEffect(() => {
+    const albumParam = searchParams.get("album");
+    if (albumParam === "palpa") {
+      const palpaAlbum = photoAlbums.find(a => a.title.includes("Palpa"));
+      if (palpaAlbum) setSelectedAlbum(palpaAlbum);
+    }
+  }, [searchParams]);
+
   if (selectedAlbum && selectedAlbum.photos && selectedAlbum.photos.length > 0) {
     return (
       <section className="py-20 bg-background">
