@@ -115,6 +115,9 @@ const PhotosSection = () => {
     } else if (albumParam === "barpak") {
       const barpakAlbum = photoAlbums.find(a => a.title.includes("Barpak"));
       if (barpakAlbum) setSelectedAlbum(barpakAlbum);
+    } else if (albumParam === "kyirong") {
+      const kyirongAlbum = photoAlbums.find(a => a.title.includes("Kyirong"));
+      if (kyirongAlbum) setSelectedAlbum(kyirongAlbum);
     }
   }, [searchParams]);
 
