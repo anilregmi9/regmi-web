@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, MapPin, FlaskConical } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const ProjectsSection = () => {
   const projects = [
@@ -25,6 +26,17 @@ const ProjectsSection = () => {
       description: "Provided geotechnical assessment for hydropower development, including slope stability analysis and foundation recommendations.",
       tags: ["Geotechnical", "Hydropower", "Slope Stability"],
       image: "⚡"
+    },
+    {
+      title: "Geophysical Investigation of Barpak Landslide",
+      location: "Barpak, Gorkha",
+      description: "Applied Electrical Resistivity Tomography (ERT) to investigate the landslide at Barpak, where the Earthquake Smarak (memorial) building was under construction. Identified weak zones, saturated layers, and slip planes to support safe construction after the 2015 Gorkha earthquake.",
+      tags: ["Geophysical Survey", "ERT", "Landslide Investigation", "Slope Stability"],
+      image: "/lovable-uploads/barpak-1.jpg",
+      isImagePhoto: true,
+      previewImages: ["/lovable-uploads/barpak-1.jpg", "/lovable-uploads/barpak-9.jpg"],
+      albumLink: "/photos?album=barpak",
+      credit: "Project led by Geologist Mr. Subash Acharya and Assistant Geologist Mr. Anil Regmi"
     }
   ];
 
@@ -73,9 +85,15 @@ const ProjectsSection = () => {
           {projects.map((project, index) => (
             <Card key={index} className="shadow-soft hover:shadow-earth transition-all duration-300 group">
               <CardHeader>
-                <div className="w-full h-48 bg-gradient-to-br from-earth-brown to-earth-orange rounded-lg mb-4 flex items-center justify-center text-6xl">
-                  {project.image}
-                </div>
+                {(project as any).isImagePhoto ? (
+                  <div className="w-full h-48 rounded-lg mb-4 overflow-hidden">
+                    <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+                  </div>
+                ) : (
+                  <div className="w-full h-48 bg-gradient-to-br from-earth-brown to-earth-orange rounded-lg mb-4 flex items-center justify-center text-6xl">
+                    {project.image}
+                  </div>
+                )}
                 <div className="flex items-center gap-2 text-muted-foreground mb-2">
                   <MapPin className="w-4 h-4" />
                   <span className="text-sm">{project.location}</span>
@@ -88,6 +106,9 @@ const ProjectsSection = () => {
                 <p className="text-muted-foreground mb-4 leading-relaxed">
                   {project.description}
                 </p>
+                {(project as any).credit && (
+                  <p className="text-sm text-primary/80 italic mb-4">{(project as any).credit}</p>
+                )}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag, idx) => (
                     <Badge key={idx} variant="outline" className="text-xs">
@@ -95,10 +116,30 @@ const ProjectsSection = () => {
                     </Badge>
                   ))}
                 </div>
-                <Button variant="outline" size="sm" className="w-full">
-                  <ExternalLink className="w-4 h-4 mr-2" />
-                  View Project Details
-                </Button>
+                {(project as any).previewImages && (
+                  <div className="grid grid-cols-2 gap-2 mb-4">
+                    {(project as any).previewImages.map((img: string, idx: number) => (
+                      <Link key={idx} to={(project as any).albumLink}>
+                        <div className="aspect-[4/3] rounded-lg overflow-hidden cursor-pointer">
+                          <img src={img} alt={`${project.title} preview ${idx + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                )}
+                {(project as any).albumLink ? (
+                  <Link to={(project as any).albumLink}>
+                    <Button variant="outline" size="sm" className="w-full">
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      View All Photos
+                    </Button>
+                  </Link>
+                ) : (
+                  <Button variant="outline" size="sm" className="w-full">
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    View Project Details
+                  </Button>
+                )}
               </CardContent>
             </Card>
           ))}
