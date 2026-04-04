@@ -197,9 +197,24 @@ const ProjectsSection = () => {
                 <p className="text-muted-foreground mb-2">
                   Susmita Dhakal, Peng Cui, Li-Jun Su, Qiang Zou, Rama Ghimire, Sumika Pakhrin and <span className="font-semibold text-primary">Anil Regmi</span>
                 </p>
-                <p className="text-sm text-muted-foreground italic">
+                <p className="text-sm text-muted-foreground italic mb-4">
                   Perspectives on Higher Education — A Peer Reviewed Journal
                 </p>
+                <div className="grid grid-cols-2 gap-2 mb-4">
+                  {["/lovable-uploads/kyirong-3.jpg", "/lovable-uploads/kyirong-7.jpg"].map((img, idx) => (
+                    <Link key={idx} to="/photos?album=kyirong">
+                      <div className="aspect-[4/3] rounded-lg overflow-hidden cursor-pointer">
+                        <img src={img} alt={`Kyirong Highway research ${idx + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+                <Link to="/photos?album=kyirong">
+                  <Button variant="outline" size="sm" className="w-full">
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    View All Photos
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           </div>
