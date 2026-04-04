@@ -110,7 +110,7 @@ const HeroSection = () => {
               <p className="text-sm text-white/80">My hometown glowing under the evening sky — where it all began</p>
             </div>
           </div>
-          <div className="group relative overflow-hidden rounded-2xl shadow-earth">
+          <Link to="/photos?album=palpa" className="group relative overflow-hidden rounded-2xl shadow-earth block">
             <img 
               src="/lovable-uploads/palpa-fieldwork.jpg" 
               alt="Anil Regmi during geological fieldwork in Palpa with local children"
@@ -121,7 +121,7 @@ const HeroSection = () => {
               <h3 className="font-semibold text-lg">Fieldwork in Palpa</h3>
               <p className="text-sm text-white/80">Moments from a college geological field trip in Palpa District</p>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </section>

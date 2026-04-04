@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Camera, FolderOpen, ArrowLeft, X } from "lucide-react";
 
@@ -11,6 +12,7 @@ interface PhotoAlbum {
 }
 
 const PhotosSection = () => {
+  const [searchParams] = useSearchParams();
   const [selectedAlbum, setSelectedAlbum] = useState<PhotoAlbum | null>(null);
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
 
@@ -70,6 +72,14 @@ const PhotosSection = () => {
       photoCount: 0
     }
   ];
+
+  useEffect(() => {
+    const albumParam = searchParams.get("album");
+    if (albumParam === "palpa") {
+      const palpaAlbum = photoAlbums.find(a => a.title.includes("Palpa"));
+      if (palpaAlbum) setSelectedAlbum(palpaAlbum);
+    }
+  }, [searchParams]);
 
   if (selectedAlbum && selectedAlbum.photos && selectedAlbum.photos.length > 0) {
     return (
