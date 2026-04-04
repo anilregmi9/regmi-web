@@ -66,6 +66,22 @@ const PhotosSection = () => {
       ]
     },
     {
+      title: "Kathmandu–Kyirong Highway Landslide Research",
+      description: "Landslide characteristics and distribution at the Kathmandu Kyirong Highway Corridor",
+      coverImage: "/lovable-uploads/kyirong-3.jpg",
+      photoCount: 8,
+      photos: [
+        "/lovable-uploads/kyirong-1.jpg",
+        "/lovable-uploads/kyirong-2.jpg",
+        "/lovable-uploads/kyirong-3.jpg",
+        "/lovable-uploads/kyirong-4.jpg",
+        "/lovable-uploads/kyirong-5.jpg",
+        "/lovable-uploads/kyirong-6.jpg",
+        "/lovable-uploads/kyirong-7.jpg",
+        "/lovable-uploads/kyirong-8.jpg",
+      ]
+    },
+    {
       title: "Field Expeditions",
       description: "Geological field work and expeditions across Nepal",
       coverImage: "/lovable-uploads/a3b0539f-dc52-4b74-9763-fa7da52dce02.png",
