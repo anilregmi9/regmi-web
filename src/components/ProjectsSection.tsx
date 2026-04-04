@@ -26,6 +26,17 @@ const ProjectsSection = () => {
       description: "Provided geotechnical assessment for hydropower development, including slope stability analysis and foundation recommendations.",
       tags: ["Geotechnical", "Hydropower", "Slope Stability"],
       image: "⚡"
+    },
+    {
+      title: "Geophysical Investigation of Barpak Landslide",
+      location: "Barpak, Gorkha",
+      description: "Applied Electrical Resistivity Tomography (ERT) to investigate the landslide at Barpak, where the Earthquake Smarak (memorial) building was under construction. Identified weak zones, saturated layers, and slip planes to support safe construction after the 2015 Gorkha earthquake.",
+      tags: ["Geophysical Survey", "ERT", "Landslide Investigation", "Slope Stability"],
+      image: "/lovable-uploads/barpak-1.jpg",
+      isImagePhoto: true,
+      previewImages: ["/lovable-uploads/barpak-1.jpg", "/lovable-uploads/barpak-9.jpg"],
+      albumLink: "/photos?album=barpak",
+      credit: "Project led by Geologist Mr. Subash Acharya and Assistant Geologist Mr. Anil Regmi"
     }
   ];
 
