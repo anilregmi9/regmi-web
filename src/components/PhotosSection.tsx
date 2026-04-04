@@ -96,6 +96,9 @@ const PhotosSection = () => {
     if (albumParam === "palpa") {
       const palpaAlbum = photoAlbums.find(a => a.title.includes("Palpa"));
       if (palpaAlbum) setSelectedAlbum(palpaAlbum);
+    } else if (albumParam === "barpak") {
+      const barpakAlbum = photoAlbums.find(a => a.title.includes("Barpak"));
+      if (barpakAlbum) setSelectedAlbum(barpakAlbum);
     }
   }, [searchParams]);
 
