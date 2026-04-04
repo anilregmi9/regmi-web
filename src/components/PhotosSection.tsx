@@ -48,6 +48,24 @@ const PhotosSection = () => {
       ]
     },
     {
+      title: "Geophysical Investigation of Barpak Landslide",
+      description: "ERT survey and landslide investigation at Barpak, Gorkha – Earthquake Smarak site",
+      coverImage: "/lovable-uploads/barpak-1.jpg",
+      photoCount: 10,
+      photos: [
+        "/lovable-uploads/barpak-1.jpg",
+        "/lovable-uploads/barpak-2.jpg",
+        "/lovable-uploads/barpak-3.jpg",
+        "/lovable-uploads/barpak-4.jpg",
+        "/lovable-uploads/barpak-5.jpg",
+        "/lovable-uploads/barpak-6.jpg",
+        "/lovable-uploads/barpak-7.jpg",
+        "/lovable-uploads/barpak-8.jpg",
+        "/lovable-uploads/barpak-9.jpg",
+        "/lovable-uploads/barpak-10.jpg",
+      ]
+    },
+    {
       title: "Field Expeditions",
       description: "Geological field work and expeditions across Nepal",
       coverImage: "/lovable-uploads/a3b0539f-dc52-4b74-9763-fa7da52dce02.png",
