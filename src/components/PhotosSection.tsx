@@ -117,6 +117,24 @@ const PhotosSection = () => {
       ]
     },
     {
+      title: "Disaster Induced Land Use Plan – Dullu Municipality",
+      description: "Geological hazard assessment and land use planning at Dullu Municipality, led by Dr. Basanta Raj Adhikari",
+      coverImage: "/lovable-uploads/dullu-1.jpg",
+      photoCount: 10,
+      photos: [
+        "/lovable-uploads/dullu-1.jpg",
+        "/lovable-uploads/dullu-2.jpg",
+        "/lovable-uploads/dullu-3.jpg",
+        "/lovable-uploads/dullu-4.jpg",
+        "/lovable-uploads/dullu-5.jpg",
+        "/lovable-uploads/dullu-6.jpg",
+        "/lovable-uploads/dullu-7.jpg",
+        "/lovable-uploads/dullu-8.jpg",
+        "/lovable-uploads/dullu-9.jpg",
+        "/lovable-uploads/dullu-10.jpg",
+      ]
+    },
+    {
       title: "Field Expeditions",
       description: "Geological field work and expeditions across Nepal",
       coverImage: "/lovable-uploads/a3b0539f-dc52-4b74-9763-fa7da52dce02.png",
@@ -159,6 +177,9 @@ const PhotosSection = () => {
     } else if (albumParam === "thesis") {
       const thesisAlbum = photoAlbums.find(a => a.title.includes("Thesis"));
       if (thesisAlbum) setSelectedAlbum(thesisAlbum);
+    } else if (albumParam === "dullu") {
+      const dulluAlbum = photoAlbums.find(a => a.title.includes("Dullu"));
+      if (dulluAlbum) setSelectedAlbum(dulluAlbum);
     }
   }, [searchParams]);
 
