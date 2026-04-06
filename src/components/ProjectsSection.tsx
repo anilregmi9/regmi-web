@@ -11,7 +11,11 @@ const ProjectsSection = () => {
       location: "Dullu Municipality",
       description: "Conducted comprehensive geological hazard assessment and developed land use planning recommendations to mitigate disaster risks.",
       tags: ["Hazard Assessment", "Land Use Planning", "GIS Mapping"],
-      image: "🏔️"
+      image: "/lovable-uploads/dullu-1.jpg",
+      isImagePhoto: true,
+      previewImages: ["/lovable-uploads/dullu-1.jpg", "/lovable-uploads/dullu-4.jpg"],
+      albumLink: "/photos?album=dullu",
+      credit: "Project led by Dr. Basanta Raj Adhikari"
     },
     {
       title: "Copper Exploration Project",
