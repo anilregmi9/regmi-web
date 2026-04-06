@@ -28,6 +28,16 @@ const ProjectsSection = () => {
       image: "⚡"
     },
     {
+      title: "Geophysical Study of Thiwa Landslide, Taplejung",
+      location: "Taplejung, Nepal",
+      description: "Conducted a comprehensive geophysical and geological investigation of the Thiwa Landslide, a slope failure primarily triggered by road construction activities and toe erosion caused by the Tamor River. The field study included four days of geophysical surveys and one day of geological mapping, focusing on identifying subsurface conditions, slope instability factors, and potential failure mechanisms.",
+      tags: ["Geophysical Survey", "Landslide Investigation", "ERT", "Geological Mapping"],
+      image: "/lovable-uploads/thiwa-9.jpg",
+      isImagePhoto: true,
+      previewImages: ["/lovable-uploads/thiwa-9.jpg"],
+      albumLink: "/photos?album=thiwa",
+    },
+    {
       title: "Geophysical Investigation of Barpak Landslide",
       location: "Barpak, Gorkha",
       description: "Applied Electrical Resistivity Tomography (ERT) to investigate the landslide at Barpak, where the Earthquake Smarak (memorial) building was under construction. Identified weak zones, saturated layers, and slip planes to support safe construction after the 2015 Gorkha earthquake.",
