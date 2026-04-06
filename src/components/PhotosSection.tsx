@@ -82,6 +82,24 @@ const PhotosSection = () => {
       ]
     },
     {
+      title: "Geophysical Study of Thiwa Landslide, Taplejung",
+      description: "Geophysical and geological investigation of the Thiwa Landslide triggered by road construction and Tamor River toe erosion",
+      coverImage: "/lovable-uploads/thiwa-9.jpg",
+      photoCount: 10,
+      photos: [
+        "/lovable-uploads/thiwa-1.jpg",
+        "/lovable-uploads/thiwa-2.jpg",
+        "/lovable-uploads/thiwa-3.jpg",
+        "/lovable-uploads/thiwa-4.jpg",
+        "/lovable-uploads/thiwa-5.jpg",
+        "/lovable-uploads/thiwa-6.jpg",
+        "/lovable-uploads/thiwa-7.jpg",
+        "/lovable-uploads/thiwa-8.jpg",
+        "/lovable-uploads/thiwa-9.jpg",
+        "/lovable-uploads/thiwa-10.jpg",
+      ]
+    },
+    {
       title: "Field Expeditions",
       description: "Geological field work and expeditions across Nepal",
       coverImage: "/lovable-uploads/a3b0539f-dc52-4b74-9763-fa7da52dce02.png",
@@ -118,6 +136,9 @@ const PhotosSection = () => {
     } else if (albumParam === "kyirong") {
       const kyirongAlbum = photoAlbums.find(a => a.title.includes("Kyirong"));
       if (kyirongAlbum) setSelectedAlbum(kyirongAlbum);
+    } else if (albumParam === "thiwa") {
+      const thiwaAlbum = photoAlbums.find(a => a.title.includes("Thiwa"));
+      if (thiwaAlbum) setSelectedAlbum(thiwaAlbum);
     }
   }, [searchParams]);
 
