@@ -193,9 +193,26 @@ const ProjectsSection = () => {
           <div className="max-w-4xl mx-auto space-y-6">
             <Card className="shadow-soft">
               <CardContent className="p-6">
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed mb-4">
                   My master's thesis focused on the stratigraphy, structural geology, and petrography of the Lesser Himalaya in the eastern Syangja region, along with the identification and assessment of mineral resources.
                 </p>
+                <p className="text-sm text-primary/80 italic mb-2">Supervisor: Prof. Dr. Lalu Prasad Paudel</p>
+                <p className="text-sm text-primary/80 italic mb-4">Thesis Partner: Mr. Biren G.C.</p>
+                <div className="grid grid-cols-2 gap-2 mb-4">
+                  {["/lovable-uploads/thesis-1.jpg", "/lovable-uploads/thesis-7.jpg"].map((img, idx) => (
+                    <Link key={idx} to="/photos?album=thesis">
+                      <div className="aspect-[4/3] rounded-lg overflow-hidden cursor-pointer">
+                        <img src={img} alt={`Thesis fieldwork ${idx + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+                <Link to="/photos?album=thesis">
+                  <Button variant="outline" size="sm" className="w-full">
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    View All Photos
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
             
