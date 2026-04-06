@@ -156,6 +156,9 @@ const PhotosSection = () => {
     } else if (albumParam === "thiwa") {
       const thiwaAlbum = photoAlbums.find(a => a.title.includes("Thiwa"));
       if (thiwaAlbum) setSelectedAlbum(thiwaAlbum);
+    } else if (albumParam === "thesis") {
+      const thesisAlbum = photoAlbums.find(a => a.title.includes("Thesis"));
+      if (thesisAlbum) setSelectedAlbum(thesisAlbum);
     }
   }, [searchParams]);
 
