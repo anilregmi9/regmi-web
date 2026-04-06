@@ -100,6 +100,23 @@ const PhotosSection = () => {
       ]
     },
     {
+      title: "Master's Thesis – Lesser Himalaya, Syangja",
+      description: "Stratigraphy, structural geology, petrography, and mineral resource assessment of the Lesser Himalaya in eastern Syangja",
+      coverImage: "/lovable-uploads/thesis-1.jpg",
+      photoCount: 9,
+      photos: [
+        "/lovable-uploads/thesis-1.jpg",
+        "/lovable-uploads/thesis-2.jpg",
+        "/lovable-uploads/thesis-3.jpg",
+        "/lovable-uploads/thesis-4.jpg",
+        "/lovable-uploads/thesis-5.jpg",
+        "/lovable-uploads/thesis-6.jpg",
+        "/lovable-uploads/thesis-7.jpg",
+        "/lovable-uploads/thesis-8.jpg",
+        "/lovable-uploads/thesis-9.jpg",
+      ]
+    },
+    {
       title: "Field Expeditions",
       description: "Geological field work and expeditions across Nepal",
       coverImage: "/lovable-uploads/a3b0539f-dc52-4b74-9763-fa7da52dce02.png",
@@ -139,6 +156,9 @@ const PhotosSection = () => {
     } else if (albumParam === "thiwa") {
       const thiwaAlbum = photoAlbums.find(a => a.title.includes("Thiwa"));
       if (thiwaAlbum) setSelectedAlbum(thiwaAlbum);
+    } else if (albumParam === "thesis") {
+      const thesisAlbum = photoAlbums.find(a => a.title.includes("Thesis"));
+      if (thesisAlbum) setSelectedAlbum(thesisAlbum);
     }
   }, [searchParams]);
 
