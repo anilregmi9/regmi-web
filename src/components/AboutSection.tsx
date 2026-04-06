@@ -273,6 +273,22 @@ const AboutSection = () => {
                 </Card>
               ))}
             </div>
+
+            {/* Photo after education */}
+            <div className="mt-10 max-w-2xl mx-auto">
+              <Card className="shadow-soft overflow-hidden">
+                <div className="aspect-[16/10] overflow-hidden">
+                  <img 
+                    src="/lovable-uploads/anil-school.jpg" 
+                    alt="Anil Regmi delivering a speech at school" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <CardContent className="p-4 text-center">
+                  <p className="text-sm text-muted-foreground italic">Delivering a speech at a school event in Syangja</p>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         )}
 

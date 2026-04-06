@@ -18,10 +18,10 @@ const ProjectsSection = () => {
       credit: "Project led by Dr. Basanta Raj Adhikari"
     },
     {
-      title: "Copper Exploration Project",
-      location: "Western Nepal",
-      description: "Led geological mapping and mineral zonation for copper exploration, including geophysical surveys and core drilling operations.",
-      tags: ["Mineral Exploration", "Geological Mapping", "Resource Estimation"],
+      title: "Geophysical Exploration of Copper",
+      location: "Myagdi, Nepal",
+      description: "Led the geophysical exploration of copper deposits at Myagdi using Electrical Resistivity Tomography (ERT) to finalize mineral zones. The project also incorporated geological methods including trenching and pitting for near-surface exploration, enabling accurate delineation of copper-bearing zones.",
+      tags: ["ERT", "Copper Exploration", "Trenching", "Pitting", "Mineral Zonation"],
       image: "⛏️"
     },
     {
