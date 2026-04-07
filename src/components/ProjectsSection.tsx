@@ -88,7 +88,7 @@ const ProjectsSection = () => {
       image: "/lovable-uploads/field-map-reading.jpg"
     },
     {
-      title: "Rock sampling with a geological hammer",
+      title: "Checking magnetic properties of rock with magnetic pen",
       image: "/lovable-uploads/field-rock-hammer.jpg"
     },
     {
