@@ -144,6 +144,13 @@ const AboutSection = () => {
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Born and raised in Syangja, a small town in central Nepal, I am a geologist passionate about the exploration and sustainable development of mineral resources.
           </p>
+          <div className="mt-8 max-w-md mx-auto">
+            <img 
+              src="/lovable-uploads/tool-handlens.jpg" 
+              alt="Examining rock minerals through a hand lens in the field" 
+              className="w-full h-64 object-cover rounded-xl shadow-lg"
+            />
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 items-center mb-16">
