@@ -92,7 +92,7 @@ const ProjectsSection = () => {
       image: "/lovable-uploads/field-rock-hammer.jpg"
     },
     {
-      title: "Examining mineral through a hand lens",
+      title: "A look of pyrite through hand lens",
       image: "/lovable-uploads/field-magnifier-gold.jpg"
     },
     {
