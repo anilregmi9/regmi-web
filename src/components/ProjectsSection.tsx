@@ -82,6 +82,22 @@ const ProjectsSection = () => {
     {
       title: "Detailed geological specimen with surface textures",
       image: "/lovable-uploads/c94bbc8f-0931-42c9-be20-5e057e6b6710.png"
+    },
+    {
+      title: "Reading a geological map in the field",
+      image: "/lovable-uploads/field-map-reading.jpg"
+    },
+    {
+      title: "Rock sampling with a geological hammer",
+      image: "/lovable-uploads/field-rock-hammer.jpg"
+    },
+    {
+      title: "Examining mineral through a hand lens",
+      image: "/lovable-uploads/field-magnifier-gold.jpg"
+    },
+    {
+      title: "Rock sampling along a river section",
+      image: "/lovable-uploads/field-river-sampling.jpg"
     }
   ];
 

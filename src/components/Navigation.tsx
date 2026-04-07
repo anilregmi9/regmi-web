@@ -10,10 +10,10 @@ const Navigation = () => {
   const navItems = [
     { href: "/", label: "Home" },
     { href: "/projects", label: "Projects" },
-    { href: "/contact", label: "Contact" },
     { href: "/literature", label: "Literature" },
     { href: "/my-nepal", label: "My Nepal" },
     { href: "/photos", label: "Photos" },
+    { href: "/contact", label: "Contact" },
   ];
 
   return (

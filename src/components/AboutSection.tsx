@@ -573,6 +573,18 @@ const AboutSection = () => {
           />
         </DialogContent>
       </Dialog>
+
+      {/* Magnetic Pen Dialog */}
+      <Dialog open={isMagneticPenDialogOpen} onOpenChange={setIsMagneticPenDialogOpen}>
+        <DialogContent className="max-w-2xl">
+          <DialogTitle className="sr-only">Magnetic Pen</DialogTitle>
+          <img 
+            src="/lovable-uploads/tool-magnetic-pen.jpg" 
+            alt="Magnetic Pen - A tool used to test the magnetic properties of minerals and rocks in the field"
+            className="w-full h-auto rounded-lg"
+          />
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
