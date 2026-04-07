@@ -2,13 +2,14 @@ import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
-import { Hammer, Search, Compass, Navigation, GraduationCap, Calendar, Code, Users, CalendarDays, MapPin, ChevronDown } from "lucide-react";
+import { Hammer, Search, Compass, Navigation, GraduationCap, Calendar, Code, Users, CalendarDays, MapPin, ChevronDown, Magnet } from "lucide-react";
 
 const AboutSection = () => {
   const [isBruntonDialogOpen, setIsBruntonDialogOpen] = useState(false);
   const [isHammerDialogOpen, setIsHammerDialogOpen] = useState(false);
   const [isLensDialogOpen, setIsLensDialogOpen] = useState(false);
   const [isGpsDialogOpen, setIsGpsDialogOpen] = useState(false);
+  const [isMagneticPenDialogOpen, setIsMagneticPenDialogOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<"education" | "experience" | "expertise" | null>(null);
   const [partnerOpen, setPartnerOpen] = useState(false);
 
