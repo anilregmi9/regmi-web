@@ -2,13 +2,14 @@ import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
-import { Hammer, Search, Compass, Navigation, GraduationCap, Calendar, Code, Users, CalendarDays, MapPin, ChevronDown } from "lucide-react";
+import { Hammer, Search, Compass, Navigation, GraduationCap, Calendar, Code, Users, CalendarDays, MapPin, ChevronDown, Magnet } from "lucide-react";
 
 const AboutSection = () => {
   const [isBruntonDialogOpen, setIsBruntonDialogOpen] = useState(false);
   const [isHammerDialogOpen, setIsHammerDialogOpen] = useState(false);
   const [isLensDialogOpen, setIsLensDialogOpen] = useState(false);
   const [isGpsDialogOpen, setIsGpsDialogOpen] = useState(false);
+  const [isMagneticPenDialogOpen, setIsMagneticPenDialogOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<"education" | "experience" | "expertise" | null>(null);
   const [partnerOpen, setPartnerOpen] = useState(false);
 
@@ -143,51 +144,79 @@ const AboutSection = () => {
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Born and raised in Syangja, a small town in central Nepal, I am a geologist passionate about the exploration and sustainable development of mineral resources.
           </p>
+          <div className="mt-8 max-w-md mx-auto">
+            <img 
+              src="/lovable-uploads/tool-handlens.jpg" 
+              alt="Examining rock minerals through a hand lens in the field" 
+              className="w-full h-64 object-cover rounded-xl shadow-lg"
+            />
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 items-center mb-16">
           <div className="grid grid-cols-2 gap-4">
             <Card 
-              className="shadow-soft cursor-pointer hover:shadow-lg transition-shadow"
+              className="shadow-soft cursor-pointer hover:shadow-lg transition-shadow overflow-hidden"
               onClick={() => setIsHammerDialogOpen(true)}
             >
-              <CardContent className="p-4">
-                <div className="aspect-square bg-earth-cream rounded-lg flex flex-col items-center justify-center gap-2">
-                  <Hammer className="w-12 h-12 text-primary" />
-                  <span className="text-sm font-medium text-muted-foreground">Geological Hammer</span>
+              <CardContent className="p-0">
+                <div className="aspect-square relative">
+                  <img src="/lovable-uploads/tool-hammer.jpg" alt="Geological Hammer" className="w-full h-full object-cover" />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
+                    <span className="text-sm font-medium text-white">Geological Hammer</span>
+                  </div>
                 </div>
               </CardContent>
             </Card>
             <Card 
-              className="shadow-soft cursor-pointer hover:shadow-lg transition-shadow"
+              className="shadow-soft cursor-pointer hover:shadow-lg transition-shadow overflow-hidden"
               onClick={() => setIsLensDialogOpen(true)}
             >
-              <CardContent className="p-4">
-                <div className="aspect-square bg-earth-brown-light rounded-lg flex flex-col items-center justify-center gap-2">
-                  <Search className="w-12 h-12 text-primary" />
-                  <span className="text-sm font-medium text-muted-foreground">Hand Lens</span>
+              <CardContent className="p-0">
+                <div className="aspect-square relative">
+                  <img src="/lovable-uploads/tool-handlens.jpg" alt="Hand Lens" className="w-full h-full object-cover" />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
+                    <span className="text-sm font-medium text-white">Hand Lens</span>
+                  </div>
                 </div>
               </CardContent>
             </Card>
             <Card 
-              className="shadow-soft cursor-pointer hover:shadow-lg transition-shadow"
+              className="shadow-soft cursor-pointer hover:shadow-lg transition-shadow overflow-hidden"
               onClick={() => setIsBruntonDialogOpen(true)}
             >
-              <CardContent className="p-4">
-                <div className="aspect-square bg-earth-orange rounded-lg flex flex-col items-center justify-center gap-2">
-                  <Compass className="w-12 h-12 text-primary" />
-                  <span className="text-sm font-medium text-muted-foreground">Brunton Compass</span>
+              <CardContent className="p-0">
+                <div className="aspect-square relative">
+                  <img src="/lovable-uploads/tool-brunton.jpg" alt="Brunton Compass" className="w-full h-full object-cover" />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
+                    <span className="text-sm font-medium text-white">Brunton Compass</span>
+                  </div>
                 </div>
               </CardContent>
             </Card>
             <Card 
-              className="shadow-soft cursor-pointer hover:shadow-lg transition-shadow"
+              className="shadow-soft cursor-pointer hover:shadow-lg transition-shadow overflow-hidden"
               onClick={() => setIsGpsDialogOpen(true)}
             >
-              <CardContent className="p-4">
-                <div className="aspect-square bg-earth-stone rounded-lg flex flex-col items-center justify-center gap-2">
-                  <Navigation className="w-12 h-12 text-primary" />
-                  <span className="text-sm font-medium text-muted-foreground">GPS Tracker</span>
+              <CardContent className="p-0">
+                <div className="aspect-square relative">
+                  <img src="/lovable-uploads/tool-gps.jpg" alt="GPS Tracker" className="w-full h-full object-cover" />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
+                    <span className="text-sm font-medium text-white">GPS Tracker</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            <Card 
+              className="shadow-soft cursor-pointer hover:shadow-lg transition-shadow overflow-hidden col-span-2"
+              onClick={() => setIsMagneticPenDialogOpen(true)}
+            >
+              <CardContent className="p-0">
+                <div className="aspect-[2/1] relative">
+                  <img src="/lovable-uploads/tool-magnetic-pen.jpg" alt="Magnetic Pen" className="w-full h-full object-cover" />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
+                    <span className="text-sm font-medium text-white">Magnetic Pen</span>
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -540,6 +569,18 @@ const AboutSection = () => {
           <img 
             src="/lovable-uploads/gps-tracker-notes.png" 
             alt="GPS Tracker - A device used for finding your location and navigating in the field"
+            className="w-full h-auto rounded-lg"
+          />
+        </DialogContent>
+      </Dialog>
+
+      {/* Magnetic Pen Dialog */}
+      <Dialog open={isMagneticPenDialogOpen} onOpenChange={setIsMagneticPenDialogOpen}>
+        <DialogContent className="max-w-2xl">
+          <DialogTitle className="sr-only">Magnetic Pen</DialogTitle>
+          <img 
+            src="/lovable-uploads/tool-magnetic-pen.jpg" 
+            alt="Magnetic Pen - A tool used to test the magnetic properties of minerals and rocks in the field"
             className="w-full h-auto rounded-lg"
           />
         </DialogContent>
