@@ -146,8 +146,8 @@ const AboutSection = () => {
           </p>
           <div className="mt-8 max-w-md mx-auto">
             <img 
-              src="/lovable-uploads/tool-handlens.jpg" 
-              alt="Examining rock minerals through a hand lens in the field" 
+              src="/lovable-uploads/field-map-reading.jpg" 
+              alt="Anil Regmi reading a geological map in the field" 
               className="w-full h-64 object-cover rounded-xl shadow-lg"
             />
           </div>
