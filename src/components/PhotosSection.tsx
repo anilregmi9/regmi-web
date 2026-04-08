@@ -151,6 +151,24 @@ const PhotosSection = () => {
       ]
     },
     {
+      title: "TC Memories",
+      description: "Memories from Tri-Chandra Multiple Campus days",
+      coverImage: "/lovable-uploads/tc-memory-1.jpg",
+      photoCount: 10,
+      photos: [
+        "/lovable-uploads/tc-memory-1.jpg",
+        "/lovable-uploads/tc-memory-2.jpg",
+        "/lovable-uploads/tc-memory-3.jpg",
+        "/lovable-uploads/tc-memory-4.jpg",
+        "/lovable-uploads/tc-memory-5.jpg",
+        "/lovable-uploads/tc-memory-6.jpg",
+        "/lovable-uploads/tc-memory-7.jpg",
+        "/lovable-uploads/tc-memory-8.jpg",
+        "/lovable-uploads/tc-memory-9.jpg",
+        "/lovable-uploads/tc-memory-10.jpg",
+      ]
+    },
+    {
       title: "Field Expeditions",
       description: "Geological field work and expeditions across Nepal",
       coverImage: "/lovable-uploads/a3b0539f-dc52-4b74-9763-fa7da52dce02.png",
