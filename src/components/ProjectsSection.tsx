@@ -29,7 +29,9 @@ const ProjectsSection = () => {
       location: "Bagmati and Rupa",
       description: "Provided geotechnical assessment for hydropower development, including slope stability analysis and foundation recommendations.",
       tags: ["Geotechnical", "Hydropower", "Slope Stability"],
-      image: "⚡"
+      image: "/lovable-uploads/geotechnical-yagya-anil.jpg",
+      isImagePhoto: true,
+      credit: "Project led by Geologist Mr. Yagya Murti Aryal of Geo Cube Pvt. Ltd."
     },
     {
       title: "Geophysical Study of Thiwa Landslide, Taplejung",
@@ -40,6 +42,7 @@ const ProjectsSection = () => {
       isImagePhoto: true,
       previewImages: ["/lovable-uploads/thiwa-9.jpg"],
       albumLink: "/photos?album=thiwa",
+      credit: "Project led by Geologist Mr. Subash Acharya"
     },
     {
       title: "Geophysical Investigation of Barpak Landslide",
