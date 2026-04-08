@@ -55,7 +55,7 @@ const MyNepal = () => {
                     <Mountain className="w-8 h-8 text-primary" />
                   </div>
                   <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4 font-heading">My Nepal</h1>
-                  <p className="text-muted-foreground text-lg">Travelogues & stories from Nepal</p>
+                  <p className="text-muted-foreground text-lg"><p className="text-muted-foreground text-lg">Travelogues, stories & photos from Nepal</p></p>
                   <Separator className="mt-6 max-w-xs mx-auto" />
                 </div>
 
