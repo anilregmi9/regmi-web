@@ -217,6 +217,9 @@ const PhotosSection = () => {
     } else if (albumParam === "iron-pyuthan") {
       const ironAlbum = photoAlbums.find(a => a.title.includes("Naubahini"));
       if (ironAlbum) setSelectedAlbum(ironAlbum);
+    } else if (albumParam === "tc-memories") {
+      const tcAlbum = photoAlbums.find(a => a.title.includes("TC Memories"));
+      if (tcAlbum) setSelectedAlbum(tcAlbum);
     }
   }, [searchParams]);
 
