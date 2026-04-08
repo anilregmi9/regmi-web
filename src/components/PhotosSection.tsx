@@ -126,7 +126,7 @@ const PhotosSection = () => {
         "/lovable-uploads/dullu-2.jpg",
         "/lovable-uploads/dullu-3.jpg",
         "/lovable-uploads/dullu-4.jpg",
-        "/lovable-uploads/dullu-5.jpg",
+         "/lovable-uploads/dullu-5.jpg",
         "/lovable-uploads/dullu-6.jpg",
         "/lovable-uploads/dullu-7.jpg",
         "/lovable-uploads/dullu-8.jpg",
