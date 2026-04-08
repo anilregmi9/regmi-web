@@ -303,8 +303,8 @@ const AboutSection = () => {
               ))}
             </div>
 
-            {/* Photo after education */}
-            <div className="mt-10 max-w-2xl mx-auto">
+            {/* Photos after education */}
+            <div className="mt-10 max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
               <Card className="shadow-soft overflow-hidden">
                 <div className="aspect-[16/10] overflow-hidden">
                   <img 
@@ -315,6 +315,18 @@ const AboutSection = () => {
                 </div>
                 <CardContent className="p-4 text-center">
                   <p className="text-sm text-muted-foreground italic">Delivering a speech at a school event in Syangja</p>
+                </CardContent>
+              </Card>
+              <Card className="shadow-soft overflow-hidden">
+                <div className="aspect-[16/10] overflow-hidden">
+                  <img 
+                    src="/lovable-uploads/roshani-school-building.jpg" 
+                    alt="Roshani English Boarding Secondary School, Syangja" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <CardContent className="p-4 text-center">
+                  <p className="text-sm text-muted-foreground italic">My School</p>
                 </CardContent>
               </Card>
             </div>
