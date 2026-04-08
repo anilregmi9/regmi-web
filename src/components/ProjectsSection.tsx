@@ -26,8 +26,8 @@ const ProjectsSection = () => {
     },
     {
       title: "Geotechnical Investigation",
-      location: "Bagmati and Rupa",
-      description: "Provided geotechnical assessment for hydropower development, including slope stability analysis and foundation recommendations.",
+      location: "Rupa Lake, Kaski, Nepal",
+      description: "Design and Build Earthen Dam, Spillway Cum Bridge, Guide Bund and Associated Works. Provided geotechnical assessment for hydropower development, including slope stability analysis and foundation recommendations.",
       tags: ["Geotechnical", "Hydropower", "Slope Stability"],
       image: "/lovable-uploads/geotechnical-yagya-anil.jpg",
       isImagePhoto: true,
