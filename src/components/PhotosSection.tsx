@@ -135,6 +135,22 @@ const PhotosSection = () => {
       ]
     },
     {
+      title: "Iron Prospecting – Naubahini, Pyuthan",
+      description: "Iron prospecting, mineralization zonation mapping and sampling at Naubahini, Pyuthan, led by Mr. Sandeep Mahat and Mr. Anil Regmi",
+      coverImage: "/lovable-uploads/iron-pyuthan-2.jpg",
+      photoCount: 8,
+      photos: [
+        "/lovable-uploads/iron-pyuthan-1.jpg",
+        "/lovable-uploads/iron-pyuthan-2.jpg",
+        "/lovable-uploads/iron-pyuthan-3.jpg",
+        "/lovable-uploads/iron-pyuthan-4.jpg",
+        "/lovable-uploads/iron-pyuthan-5.jpg",
+        "/lovable-uploads/iron-pyuthan-6.jpg",
+        "/lovable-uploads/iron-pyuthan-7.jpg",
+        "/lovable-uploads/iron-pyuthan-8.jpg",
+      ]
+    },
+    {
       title: "Field Expeditions",
       description: "Geological field work and expeditions across Nepal",
       coverImage: "/lovable-uploads/a3b0539f-dc52-4b74-9763-fa7da52dce02.png",
