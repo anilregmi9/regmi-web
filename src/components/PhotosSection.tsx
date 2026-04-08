@@ -196,6 +196,9 @@ const PhotosSection = () => {
     } else if (albumParam === "dullu") {
       const dulluAlbum = photoAlbums.find(a => a.title.includes("Dullu"));
       if (dulluAlbum) setSelectedAlbum(dulluAlbum);
+    } else if (albumParam === "iron-pyuthan") {
+      const ironAlbum = photoAlbums.find(a => a.title.includes("Naubahini"));
+      if (ironAlbum) setSelectedAlbum(ironAlbum);
     }
   }, [searchParams]);
 
