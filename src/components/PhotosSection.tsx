@@ -126,12 +126,28 @@ const PhotosSection = () => {
         "/lovable-uploads/dullu-2.jpg",
         "/lovable-uploads/dullu-3.jpg",
         "/lovable-uploads/dullu-4.jpg",
-        "/lovable-uploads/dullu-5.jpg",
+         "/lovable-uploads/dullu-5.jpg",
         "/lovable-uploads/dullu-6.jpg",
         "/lovable-uploads/dullu-7.jpg",
         "/lovable-uploads/dullu-8.jpg",
         "/lovable-uploads/dullu-9.jpg",
         "/lovable-uploads/dullu-10.jpg",
+      ]
+    },
+    {
+      title: "Iron Prospecting – Naubahini, Pyuthan",
+      description: "Iron prospecting, mineralization zonation mapping and sampling at Naubahini, Pyuthan, led by Mr. Sandeep Mahat and Mr. Anil Regmi",
+      coverImage: "/lovable-uploads/iron-pyuthan-2.jpg",
+      photoCount: 8,
+      photos: [
+        "/lovable-uploads/iron-pyuthan-1.jpg",
+        "/lovable-uploads/iron-pyuthan-2.jpg",
+        "/lovable-uploads/iron-pyuthan-3.jpg",
+        "/lovable-uploads/iron-pyuthan-4.jpg",
+        "/lovable-uploads/iron-pyuthan-5.jpg",
+        "/lovable-uploads/iron-pyuthan-6.jpg",
+        "/lovable-uploads/iron-pyuthan-7.jpg",
+        "/lovable-uploads/iron-pyuthan-8.jpg",
       ]
     },
     {
@@ -180,6 +196,9 @@ const PhotosSection = () => {
     } else if (albumParam === "dullu") {
       const dulluAlbum = photoAlbums.find(a => a.title.includes("Dullu"));
       if (dulluAlbum) setSelectedAlbum(dulluAlbum);
+    } else if (albumParam === "iron-pyuthan") {
+      const ironAlbum = photoAlbums.find(a => a.title.includes("Naubahini"));
+      if (ironAlbum) setSelectedAlbum(ironAlbum);
     }
   }, [searchParams]);
 

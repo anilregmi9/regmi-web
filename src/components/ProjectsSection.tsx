@@ -54,6 +54,17 @@ const ProjectsSection = () => {
       previewImages: ["/lovable-uploads/barpak-1.jpg", "/lovable-uploads/barpak-9.jpg"],
       albumLink: "/photos?album=barpak",
       credit: "Project led by Geologist Mr. Subash Acharya and Assistant Geologist Mr. Anil Regmi"
+    },
+    {
+      title: "Iron Prospecting – Naubahini, Pyuthan",
+      location: "Naubahini, Pyuthan, Nepal",
+      description: "Conducted iron prospecting, mineralization zonation mapping, and systematic sampling at Naubahini, Pyuthan. The iron mineralization occurs within metasandstone/quartzite units, flanked by marble and schist on either side, indicating a structurally and lithologically controlled deposit. Field investigations included detailed geological mapping, outcrop documentation, and representative sampling to delineate the extent and grade of iron mineralization across the target area.",
+      tags: ["Iron Prospecting", "Mineralization Mapping", "Sampling", "Geological Mapping"],
+      image: "/lovable-uploads/iron-pyuthan-2.jpg",
+      isImagePhoto: true,
+      previewImages: ["/lovable-uploads/iron-pyuthan-2.jpg", "/lovable-uploads/iron-pyuthan-4.jpg"],
+      albumLink: "/photos?album=iron-pyuthan",
+      credit: "Project led by Mr. Sandeep Mahat and Mr. Anil Regmi"
     }
   ];
 
