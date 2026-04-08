@@ -59,6 +59,36 @@ const MyNepal = () => {
                   <Separator className="mt-6 max-w-xs mx-auto" />
                 </div>
 
+                {/* Photo Album - Pyuthan */}
+                <div className="mb-12 rounded-2xl overflow-hidden shadow-lg">
+                  <div className="grid grid-cols-1 md:grid-cols-2 h-[50vh]">
+                    <div className="relative overflow-hidden group">
+                      <img
+                        src="/lovable-uploads/kothi-bhir-pyuthan.jpg"
+                        alt="Kothi Bhir, Pyuthan District"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                      <div className="absolute bottom-4 left-4 right-4">
+                        <h3 className="text-lg font-bold text-white">Kothi Bhir, Pyuthan</h3>
+                        <p className="text-white/70 text-sm">A site of religious and historical importance</p>
+                      </div>
+                    </div>
+                    <div className="relative overflow-hidden group">
+                      <img
+                        src="/lovable-uploads/naubahini-southern-view.jpg"
+                        alt="Southern view from Naubahini, Pyuthan"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                      <div className="absolute bottom-4 left-4 right-4">
+                        <h3 className="text-lg font-bold text-white">Naubahini, Pyuthan</h3>
+                        <p className="text-white/70 text-sm">Southern view of the hills</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {items.map((item) => (
                     <Card
