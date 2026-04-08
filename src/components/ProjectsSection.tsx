@@ -42,6 +42,7 @@ const ProjectsSection = () => {
       isImagePhoto: true,
       previewImages: ["/lovable-uploads/thiwa-9.jpg"],
       albumLink: "/photos?album=thiwa",
+      credit: "Project led by Geologist Mr. Subash Acharya"
     },
     {
       title: "Geophysical Investigation of Barpak Landslide",
