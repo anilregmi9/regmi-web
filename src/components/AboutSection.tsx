@@ -332,30 +332,6 @@ const AboutSection = () => {
               <Card className="shadow-soft overflow-hidden">
                 <div className="aspect-[16/10] overflow-hidden">
                   <img 
-                    src="/lovable-uploads/tc-memory-1.jpg" 
-                    alt="Friends at Tri-Chandra Campus" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <CardContent className="p-4 text-center">
-                  <p className="text-sm text-muted-foreground italic">Friends at TC</p>
-                </CardContent>
-              </Card>
-              <Card className="shadow-soft overflow-hidden">
-                <div className="aspect-[16/10] overflow-hidden">
-                  <img 
-                    src="/lovable-uploads/tc-memory-2.jpg" 
-                    alt="Rafting with friends" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <CardContent className="p-4 text-center">
-                  <p className="text-sm text-muted-foreground italic">Rafting with friends</p>
-                </CardContent>
-              </Card>
-              <Card className="shadow-soft overflow-hidden">
-                <div className="aspect-[16/10] overflow-hidden">
-                  <img 
                     src="/lovable-uploads/tc-memory-10.jpg" 
                     alt="Geology department in TC" 
                     className="w-full h-full object-cover"
