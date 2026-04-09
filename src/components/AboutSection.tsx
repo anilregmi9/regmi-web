@@ -344,8 +344,8 @@ const AboutSection = () => {
               <Card className="shadow-soft overflow-hidden">
                 <div className="aspect-[16/10] overflow-hidden">
                   <img 
-                    src="/lovable-uploads/tc-memory-9.jpg" 
-                    alt="Classmates at Tri-Chandra Campus" 
+                    src="/lovable-uploads/tc-memory-8.jpg" 
+                    alt="Classmates at Tri-Chandra Campus"
                     className="w-full h-full object-cover"
                   />
                 </div>

@@ -153,7 +153,7 @@ const PhotosSection = () => {
     {
       title: "TC Memories",
       description: "Memories from Tri-Chandra Multiple Campus days",
-      coverImage: "/lovable-uploads/tc-memory-1.jpg",
+      coverImage: "/lovable-uploads/tc-memory-7.jpg",
       photoCount: 10,
       photos: [
         "/lovable-uploads/tc-memory-1.jpg",
