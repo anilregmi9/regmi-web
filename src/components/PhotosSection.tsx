@@ -153,7 +153,7 @@ const PhotosSection = () => {
     {
       title: "TC Memories",
       description: "Memories from Tri-Chandra Multiple Campus days",
-      coverImage: "/lovable-uploads/tc-memory-1.jpg",
+      coverImage: "/lovable-uploads/tc-memory-7.jpg",
       photoCount: 10,
       photos: [
         "/lovable-uploads/tc-memory-1.jpg",
@@ -166,6 +166,24 @@ const PhotosSection = () => {
         "/lovable-uploads/tc-memory-8.jpg",
         "/lovable-uploads/tc-memory-9.jpg",
         "/lovable-uploads/tc-memory-10.jpg",
+      ]
+    },
+    {
+      title: "Naubahini, Pyuthan",
+      description: "Scenic landscapes, caves, waterfalls, and cultural sites from Naubahini area in Pyuthan district",
+      coverImage: "/lovable-uploads/naubahini-album-1.jpg",
+      photoCount: 10,
+      photos: [
+        "/lovable-uploads/naubahini-album-1.jpg",
+        "/lovable-uploads/naubahini-album-2.jpg",
+        "/lovable-uploads/naubahini-album-3.jpg",
+        "/lovable-uploads/naubahini-album-4.jpg",
+        "/lovable-uploads/naubahini-album-5.jpg",
+        "/lovable-uploads/naubahini-album-6.jpg",
+        "/lovable-uploads/naubahini-album-7.jpg",
+        "/lovable-uploads/naubahini-album-8.jpg",
+        "/lovable-uploads/naubahini-album-9.jpg",
+        "/lovable-uploads/naubahini-album-10.jpg",
       ]
     },
     {
@@ -220,6 +238,9 @@ const PhotosSection = () => {
     } else if (albumParam === "tc-memories") {
       const tcAlbum = photoAlbums.find(a => a.title.includes("TC Memories"));
       if (tcAlbum) setSelectedAlbum(tcAlbum);
+    } else if (albumParam === "naubahini-pyuthan") {
+      const naubahiniAlbum = photoAlbums.find(a => a.title === "Naubahini, Pyuthan");
+      if (naubahiniAlbum) setSelectedAlbum(naubahiniAlbum);
     }
   }, [searchParams]);
 
