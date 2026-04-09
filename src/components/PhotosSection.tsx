@@ -169,6 +169,24 @@ const PhotosSection = () => {
       ]
     },
     {
+      title: "Naubahini, Pyuthan",
+      description: "Scenic landscapes, caves, waterfalls, and cultural sites from Naubahini area in Pyuthan district",
+      coverImage: "/lovable-uploads/naubahini-album-1.jpg",
+      photoCount: 10,
+      photos: [
+        "/lovable-uploads/naubahini-album-1.jpg",
+        "/lovable-uploads/naubahini-album-2.jpg",
+        "/lovable-uploads/naubahini-album-3.jpg",
+        "/lovable-uploads/naubahini-album-4.jpg",
+        "/lovable-uploads/naubahini-album-5.jpg",
+        "/lovable-uploads/naubahini-album-6.jpg",
+        "/lovable-uploads/naubahini-album-7.jpg",
+        "/lovable-uploads/naubahini-album-8.jpg",
+        "/lovable-uploads/naubahini-album-9.jpg",
+        "/lovable-uploads/naubahini-album-10.jpg",
+      ]
+    },
+    {
       title: "Field Expeditions",
       description: "Geological field work and expeditions across Nepal",
       coverImage: "/lovable-uploads/a3b0539f-dc52-4b74-9763-fa7da52dce02.png",
