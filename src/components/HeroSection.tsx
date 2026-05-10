@@ -1,12 +1,23 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, BookOpen, Linkedin } from "lucide-react";
+import GeologicalBackground from "@/components/GeologicalBackground";
 
 const HeroSection = () => {
   return (
     <>
-    <section id="home" className="min-h-screen flex items-center justify-center relative gradient-subtle">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <section id="home" className="min-h-screen flex items-center justify-center relative gradient-subtle overflow-hidden">
+      {/* Animated geological 3D background */}
+      <GeologicalBackground />
+      {/* Subtle strata overlay */}
+      <div
+        className="absolute inset-0 -z-0 pointer-events-none opacity-[0.07]"
+        style={{
+          backgroundImage:
+            "repeating-linear-gradient(180deg, hsl(var(--foreground)) 0 1px, transparent 1px 38px), repeating-linear-gradient(180deg, transparent 0 18px, hsl(var(--foreground)/0.5) 18px 19px, transparent 19px 38px)",
+        }}
+      />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left">
             <p className="text-accent font-medium mb-4">Hello, I'm</p>
