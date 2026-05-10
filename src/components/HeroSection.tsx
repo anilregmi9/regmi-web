@@ -85,14 +85,15 @@ const HeroSection = () => {
           
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
-              <div className="w-80 h-80 rounded-full overflow-hidden shadow-earth bg-gradient-to-br from-earth-brown to-earth-orange p-1">
+              <div className="absolute -inset-3 rounded-full bg-gradient-to-tr from-earth-orange via-accent to-earth-brown opacity-60 blur-2xl animate-pulse" />
+              <div className="relative w-80 h-80 rounded-full overflow-hidden shadow-earth bg-gradient-to-br from-earth-brown to-earth-orange p-1">
                 <img 
                   src="/lovable-uploads/2f647f6e-9e54-4fd7-ae8c-172b475248bd.png" 
                   alt="Anil Regmi - Professional Geologist"
                   className="w-full h-full rounded-full object-cover"
                 />
               </div>
-              <div className="absolute -top-4 -right-4 bg-accent text-accent-foreground px-4 py-2 rounded-full font-medium shadow-soft">
+              <div className="absolute -top-4 -right-4 bg-accent text-accent-foreground px-4 py-2 rounded-full font-medium shadow-soft z-10">
                 Geologist
               </div>
             </div>
@@ -100,7 +101,7 @@ const HeroSection = () => {
         </div>
       </div>
       
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
         <ChevronDown className="w-6 h-6 text-muted-foreground animate-bounce" />
       </div>
     </section>
