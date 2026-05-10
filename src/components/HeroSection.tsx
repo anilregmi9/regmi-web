@@ -1,12 +1,23 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, BookOpen, Linkedin } from "lucide-react";
+import GeologicalBackground from "@/components/GeologicalBackground";
 
 const HeroSection = () => {
   return (
     <>
-    <section id="home" className="min-h-screen flex items-center justify-center relative gradient-subtle">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <section id="home" className="min-h-screen flex items-center justify-center relative gradient-subtle overflow-hidden">
+      {/* Animated geological 3D background */}
+      <GeologicalBackground />
+      {/* Subtle strata overlay */}
+      <div
+        className="absolute inset-0 -z-0 pointer-events-none opacity-[0.07]"
+        style={{
+          backgroundImage:
+            "repeating-linear-gradient(180deg, hsl(var(--foreground)) 0 1px, transparent 1px 38px), repeating-linear-gradient(180deg, transparent 0 18px, hsl(var(--foreground)/0.5) 18px 19px, transparent 19px 38px)",
+        }}
+      />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left">
             <p className="text-accent font-medium mb-4">Hello, I'm</p>
@@ -74,14 +85,15 @@ const HeroSection = () => {
           
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
-              <div className="w-80 h-80 rounded-full overflow-hidden shadow-earth bg-gradient-to-br from-earth-brown to-earth-orange p-1">
+              <div className="absolute -inset-3 rounded-full bg-gradient-to-tr from-earth-orange via-accent to-earth-brown opacity-60 blur-2xl animate-pulse" />
+              <div className="relative w-80 h-80 rounded-full overflow-hidden shadow-earth bg-gradient-to-br from-earth-brown to-earth-orange p-1">
                 <img 
                   src="/lovable-uploads/2f647f6e-9e54-4fd7-ae8c-172b475248bd.png" 
                   alt="Anil Regmi - Professional Geologist"
                   className="w-full h-full rounded-full object-cover"
                 />
               </div>
-              <div className="absolute -top-4 -right-4 bg-accent text-accent-foreground px-4 py-2 rounded-full font-medium shadow-soft">
+              <div className="absolute -top-4 -right-4 bg-accent text-accent-foreground px-4 py-2 rounded-full font-medium shadow-soft z-10">
                 Geologist
               </div>
             </div>
@@ -89,7 +101,7 @@ const HeroSection = () => {
         </div>
       </div>
       
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
         <ChevronDown className="w-6 h-6 text-muted-foreground animate-bounce" />
       </div>
     </section>
