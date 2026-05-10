@@ -213,7 +213,7 @@ const AboutSection = () => {
             >
               <CardContent className="p-0">
                 <div className="aspect-[2/1] relative">
-                  <img src="/lovable-uploads/tool-magnetic-pen.jpg" alt="Magnetic Pen" className="w-full h-full object-cover" />
+                  <img src="/lovable-uploads/iron-pyuthan-3.jpg" alt="Magnetic Pen" className="w-full h-full object-cover" />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
                     <span className="text-sm font-medium text-white">Magnetic Pen</span>
                   </div>
