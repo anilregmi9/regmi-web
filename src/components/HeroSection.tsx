@@ -138,10 +138,11 @@ const HeroSection = () => {
                 >
                   <img
                     src="/lovable-uploads/hero-mountains.jpg"
-                    alt="Anil trekking in the Himalayas"
+                    alt="Anil with his field partner dog in the Himalayas"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                 </div>
+                <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 text-[10px] font-medium bg-card border border-border px-2 py-0.5 rounded-full whitespace-nowrap shadow-soft">The Field Partner</span>
               </div>
             </div>
           </div>
