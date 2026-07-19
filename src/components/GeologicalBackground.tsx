@@ -8,18 +8,18 @@
 const GeologicalBackground = () => {
   return (
     <div className="absolute inset-0 -z-0 pointer-events-none overflow-hidden">
-      {/* Warm radial glows - mineral/ore feel */}
+      {/* Warm radial glows - mineral/ore feel (toned down) */}
       <div
-        className="absolute inset-0 opacity-70 dark:opacity-50"
+        className="absolute inset-0 opacity-40 dark:opacity-30"
         style={{
           background:
-            "radial-gradient(circle at 18% 25%, hsl(var(--accent) / 0.35), transparent 45%), radial-gradient(circle at 82% 70%, hsl(25 70% 45% / 0.3), transparent 50%), radial-gradient(circle at 50% 100%, hsl(210 40% 30% / 0.25), transparent 55%)",
+            "radial-gradient(circle at 18% 25%, hsl(var(--accent) / 0.22), transparent 45%), radial-gradient(circle at 82% 70%, hsl(25 70% 45% / 0.18), transparent 50%), radial-gradient(circle at 50% 100%, hsl(210 40% 30% / 0.15), transparent 55%)",
         }}
       />
 
       {/* Floating crystal shapes (SVG) */}
       <svg
-        className="absolute inset-0 w-full h-full opacity-30 dark:opacity-25"
+        className="absolute inset-0 w-full h-full opacity-[0.14] dark:opacity-[0.12]"
         viewBox="0 0 1200 800"
         preserveAspectRatio="xMidYMid slice"
         aria-hidden="true"
