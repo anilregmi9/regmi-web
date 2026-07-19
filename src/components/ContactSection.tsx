@@ -40,6 +40,26 @@ const ContactSection = () => {
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Feel free to reach out for collaboration opportunities, consulting services, or to discuss how my geological expertise can benefit your project.
           </p>
+
+          <div className="mt-14 flex flex-col items-center">
+            <div className="relative inline-flex items-center gap-4">
+              <span className="hidden sm:block h-px w-16 bg-gradient-to-r from-transparent to-primary/60" />
+              <h3 className="font-serif italic text-3xl sm:text-4xl tracking-wide text-primary">
+                Find me here
+              </h3>
+              <span className="hidden sm:block h-px w-16 bg-gradient-to-l from-transparent to-primary/60" />
+            </div>
+            <p className="mt-2 text-sm text-muted-foreground tracking-widest uppercase">
+              Scan to connect
+            </p>
+            <div className="mt-6 p-4 bg-background rounded-2xl shadow-earth border border-border/60 hover:scale-105 transition-transform">
+              <img
+                src={qrAsset.url}
+                alt="QR code linking to Anil Regmi's contact"
+                className="w-44 h-44 sm:w-52 sm:h-52 object-contain"
+              />
+            </div>
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
