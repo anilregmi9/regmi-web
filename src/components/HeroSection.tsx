@@ -94,9 +94,8 @@ const HeroSection = () => {
                   <img
                     src={anilCore.url}
                     alt="Anil Regmi logging drill core samples"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain object-center bg-background"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent pointer-events-none" />
                 </div>
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground px-4 py-1.5 rounded-full font-medium text-xs tracking-wide shadow-soft whitespace-nowrap">
                   GEOLOGIST
