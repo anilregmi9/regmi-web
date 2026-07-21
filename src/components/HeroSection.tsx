@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, BookOpen, Linkedin } from "lucide-react";
 import GeologicalBackground from "@/components/GeologicalBackground";
+import anilCore from "@/assets/anil-core.jpg.asset.json";
 
 const HeroSection = () => {
   return (
@@ -91,8 +92,8 @@ const HeroSection = () => {
               <div className="absolute inset-x-8 top-0 bottom-16 z-10 group">
                 <div className="relative w-full h-full rounded-3xl overflow-hidden ring-1 ring-border/60 shadow-earth bg-gradient-to-br from-primary/20 to-accent/20 transition-transform duration-500 group-hover:scale-[1.01]">
                   <img
-                    src="/lovable-uploads/2f647f6e-9e54-4fd7-ae8c-172b475248bd.png"
-                    alt="Anil Regmi - Professional Geologist"
+                    src={anilCore.url}
+                    alt="Anil Regmi logging drill core samples"
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent pointer-events-none" />
@@ -100,6 +101,18 @@ const HeroSection = () => {
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground px-4 py-1.5 rounded-full font-medium text-xs tracking-wide shadow-soft whitespace-nowrap">
                   GEOLOGIST
                 </div>
+              </div>
+
+              {/* Hello thumbnail — top-left, previous portrait */}
+              <div className="absolute -left-2 sm:-left-4 top-6 z-20 group">
+                <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden ring-2 ring-background shadow-soft bg-card transition-transform duration-500 group-hover:-translate-y-1">
+                  <img
+                    src="/lovable-uploads/2f647f6e-9e54-4fd7-ae8c-172b475248bd.png"
+                    alt="Anil Regmi portrait"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 text-[10px] font-medium bg-card border border-border px-2 py-0.5 rounded-full whitespace-nowrap shadow-soft">Hello</span>
               </div>
 
               {/* Fieldwork thumbnail — top-right, uniform rounded card */}
