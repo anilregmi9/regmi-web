@@ -52,11 +52,12 @@ const ContactSection = () => {
             <p className="mt-2 text-sm text-muted-foreground tracking-widest uppercase">
               Scan to connect
             </p>
-            <div className="mt-6 p-4 bg-white rounded-2xl shadow-earth border border-border/60 hover:scale-105 transition-transform">
+            <div className="mt-6 p-3 bg-white rounded-2xl shadow-earth border border-border/60 hover:scale-105 transition-transform">
               <img
                 src={qrAsset.url}
                 alt="QR code linking to Anil Regmi's contact"
-                className="w-44 h-44 sm:w-52 sm:h-52 object-contain"
+                loading="lazy"
+                className="w-32 h-32 sm:w-36 sm:h-36 object-contain [image-rendering:pixelated]"
               />
             </div>
           </div>
