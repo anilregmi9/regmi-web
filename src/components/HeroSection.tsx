@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, BookOpen, Linkedin } from "lucide-react";
 import GeologicalBackground from "@/components/GeologicalBackground";
+import HeroPortrait from "@/components/HeroPortrait";
 import anilCore from "@/assets/anil-core-main.jpg.asset.json";
 
 const HeroSection = () => {
