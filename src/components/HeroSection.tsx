@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, BookOpen, Linkedin } from "lucide-react";
 import GeologicalBackground from "@/components/GeologicalBackground";
+import HeroPortrait from "@/components/HeroPortrait";
 import anilCore from "@/assets/anil-core-main.jpg.asset.json";
 
 const HeroSection = () => {
@@ -83,20 +84,17 @@ const HeroSection = () => {
           </div>
 
           {/* Portrait composition — cleaner alignment */}
-          <div className="flex justify-center lg:justify-end">
-            <div className="relative w-[20rem] h-[24rem] sm:w-[24rem] sm:h-[26rem]">
+          <div className="flex justify-center lg:justify-end w-full">
+            <div className="relative w-[min(88vw,20rem)] h-[min(105vw,24rem)] sm:w-[24rem] sm:h-[27rem] lg:w-[26rem] lg:h-[30rem]">
               {/* Ambient glow */}
               <div className="absolute -inset-8 bg-gradient-to-tr from-primary/30 via-accent/25 to-transparent blur-3xl pointer-events-none" />
 
-              {/* Main portrait — rounded 2xl instead of clipped hexagon for cleaner feel */}
-              <div className="absolute inset-x-8 top-0 bottom-16 z-10 group">
-                <div className="relative w-full h-full rounded-3xl overflow-hidden ring-1 ring-border/60 shadow-earth bg-gradient-to-br from-primary/20 to-accent/20 transition-transform duration-500 group-hover:scale-[1.01]">
-                  <img
-                    src={anilCore.url}
-                    alt="Anil Regmi logging drill core samples"
-                    className="w-full h-full object-contain object-center bg-background"
-                  />
-                </div>
+              {/* Main portrait — responsive, fully visible by default */}
+              <div className="absolute inset-x-[12%] top-0 bottom-[18%] z-10 group">
+                <HeroPortrait
+                  src={anilCore.url}
+                  alt="Anil Regmi logging drill core samples"
+                />
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground px-4 py-1.5 rounded-full font-medium text-xs tracking-wide shadow-soft whitespace-nowrap">
                   GEOLOGIST
                 </div>
