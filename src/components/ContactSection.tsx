@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Mail, Linkedin, Twitter, MessageSquare } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-import qrAsset from "@/assets/anil-qr.jpeg.asset.json";
+
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -54,7 +54,7 @@ const ContactSection = () => {
             </p>
             <div className="mt-6 p-3 bg-white rounded-2xl shadow-earth border border-border/60 hover:scale-105 transition-transform">
               <img
-                src={qrAsset.url}
+                src="/lovable-uploads/anil-qr.jpg"
                 alt="QR code linking to Anil Regmi's contact"
                 loading="lazy"
                 className="w-32 h-32 sm:w-36 sm:h-36 object-contain [image-rendering:pixelated]"
