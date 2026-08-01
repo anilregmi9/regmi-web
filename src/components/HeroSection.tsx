@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronDown, BookOpen, Linkedin } from "lucide-react";
 import GeologicalBackground from "@/components/GeologicalBackground";
 import HeroPortrait from "@/components/HeroPortrait";
-import anilCore from "@/assets/anil-core-main.jpg.asset.json";
+
 
 const HeroSection = () => {
   return (
@@ -92,7 +92,7 @@ const HeroSection = () => {
               {/* Main portrait — responsive, fully visible by default */}
               <div className="absolute inset-x-[12%] top-0 bottom-[18%] z-10 group">
                 <HeroPortrait
-                  src={anilCore.url}
+                  src="/lovable-uploads/anil-core-main.jpg"
                   alt="Anil Regmi logging drill core samples"
                 />
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground px-4 py-1.5 rounded-full font-medium text-xs tracking-wide shadow-soft whitespace-nowrap">
