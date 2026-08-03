@@ -15,7 +15,8 @@ const ExperienceSection = () => {
         "Subsurface data interpretation and quality control of logged data",
         "Supporting resource definition and near-mine discovery programs",
         "Applying geology and mineral exploration skills in a large-scale gold operation"
-      ]
+      ],
+      link: "https://www.munrogeological.com.au/"
     },
     {
       title: "Geologist",
