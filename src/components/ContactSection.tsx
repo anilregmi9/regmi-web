@@ -197,6 +197,10 @@ const ContactSection = () => {
             </Card>
           </div>
         </div>
+
+        <div className="mt-12">
+          <TwitterFeed handle="midhillnepal" />
+        </div>
       </div>
     </section>
   );
