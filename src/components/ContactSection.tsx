@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Mail, Linkedin, Twitter, MessageSquare } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import TwitterFeed from "@/components/TwitterFeed";
 
 
 const ContactSection = () => {
@@ -195,6 +196,10 @@ const ContactSection = () => {
               </CardContent>
             </Card>
           </div>
+        </div>
+
+        <div className="mt-12">
+          <TwitterFeed handle="midhillnepal" />
         </div>
       </div>
     </section>
