@@ -5,10 +5,23 @@ import { CalendarDays, MapPin } from "lucide-react";
 const ExperienceSection = () => {
   const professionalExperiences = [
     {
-      title: "Geologist (Consultant)",
-      company: "Marakat Consult Pvt. Ltd./ Geo Cube Pvt. Ltd.",
-      location: "Nepal",
-      period: "August 2023 - August 2025",
+      title: "Geologist (Contract)",
+      company: "Munro Geological Services",
+      location: "New South Wales, Australia · On-site",
+      period: "March 2026 - Present",
+      description: "Working as a contractor geologist at Cowal gold operations. Logging grade control, resource definition and discovery holes, with a focus on accurate geological data capture and subsurface interpretation.",
+      highlights: [
+        "Geological logging of grade control, resource definition and discovery drill holes",
+        "Subsurface data interpretation and quality control of logged data",
+        "Supporting resource definition and near-mine discovery programs",
+        "Applying geology and mineral exploration skills in a large-scale gold operation"
+      ]
+    },
+    {
+      title: "Geologist",
+      company: "Marakat Consult Pvt. Ltd. / Geo Cube Pvt. Ltd.",
+      location: "Nepal · Hybrid",
+      period: "July 2023 - September 2025",
       description: "Providing consultation services for a wide range of geological and geotechnical investigations related to mining operations and engineering projects, including hydropower, road construction, and infrastructure development. Additionally, offering expert advice and support in the areas of mineral exploration, reserve estimation, and geotechnical assessments.",
       highlights: [
         "Expert consultation for mining operations and engineering projects",
@@ -19,16 +32,29 @@ const ExperienceSection = () => {
       link: "https://marakat.com.np/"
     },
     {
-      title: "Geologist",
+      title: "Exploration Geologist",
       company: "Nepal Jindu Mining Pvt. Ltd.",
-      location: "Nepal",
-      period: "July 2021 - August 2023",
-      description: "My exploration work in Nepal focuses primarily on metallic minerals, particularly copper, iron, lead, and zinc. I am involved in a wide range of technical activities including detailed geological mapping, mineral zonation mapping, and geophysical surveys such as Electrical Resistivity Tomography (ERT) and Seismic Refraction Tomography (SRT).",
+      location: "Maharajgunj, Kathmandu · Hybrid",
+      period: "July 2021 - July 2023",
+      description: "Worked as exploration geologist for the exploration of metallic minerals in Nepal. Geological logging and drilling management were the major tasks, followed by geophysical exploration (ERT, SRT and VES). The metallic minerals were mainly copper, iron, lead, cobalt and zinc, along with non-metallic deposits.",
       highlights: [
-        "Conducted detailed geological mapping and mineral zonation for copper, iron, lead, and zinc exploration",
-        "Performed geophysical surveys including ERT and SRT",
+        "Conducted detailed geological mapping and mineral zonation for copper, iron, lead, cobalt and zinc exploration",
+        "Performed geophysical surveys including ERT, SRT and VES",
         "Managed core drilling, trenching, and pitting operations for geotechnical investigations",
         "Coordinated with government authorities for licensing and compliance"
+      ]
+    },
+    {
+      title: "Assistant Hydrogeologist",
+      company: "Janakpur Construction and Tubewell Drilling Company",
+      location: "Janakpur, Nepal",
+      period: "November 2017 - August 2018",
+      description: "Assisted in groundwater exploration and tubewell drilling operations across the Terai region, supporting site selection, drilling supervision and aquifer assessment.",
+      highlights: [
+        "Groundwater exploration and tubewell site selection",
+        "Supervision of drilling operations and lithological logging",
+        "Aquifer and water quality assessment",
+        "Problem solving and project management support in the field"
       ]
     }
   ];
@@ -38,8 +64,8 @@ const ExperienceSection = () => {
       title: "President",
       company: "Nepal Geological Student's Society (NGSS)",
       location: "Nepal",
-      period: "2019 - 2020",
-      description: "Led the Nepal Geological Student's Society, organizing academic events, workshops, and field trips to promote geological education and professional development among students.",
+      period: "August 2019 - December 2020",
+      description: "Led the Nepal Geological Students' Society, which works for upgrading the geology students of Nepal on different subtopics and professional works, along with helping them in academic activities.",
       highlights: [
         "Organized geological seminars and educational workshops",
         "Coordinated with universities and professional bodies",
@@ -47,8 +73,21 @@ const ExperienceSection = () => {
         "Managed society operations and student engagement"
       ],
       link: "https://ngss.org.np/"
+    },
+    {
+      title: "Volunteer Member",
+      company: "Survey for collecting data of earthquake damages",
+      location: "Nepal",
+      period: "May 2015 - June 2015",
+      description: "As a volunteer, I got the chance to meet people and listen to their thoughts about the earthquake while sharing knowledge about earthquakes with them. It was a valuable opportunity to learn how to work in the field, share knowledge and raise awareness.",
+      highlights: [
+        "Collected field data on earthquake damage",
+        "Interviewed affected residents and documented their experiences",
+        "Shared earthquake awareness and safety knowledge with communities"
+      ]
     }
   ];
+
 
   const renderExperienceCard = (exp: typeof professionalExperiences[0], index: number) => (
     <Card key={index} className="shadow-earth">
