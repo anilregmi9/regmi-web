@@ -493,9 +493,10 @@ const AboutSection = () => {
                           ))}
                         </div>
                       </div>
-                      {exp.link && (
+                      {(exp as any).link && (
                         <a 
-                          href={exp.link} 
+                          href={(exp as any).link} 
+
                           target="_blank" 
                           rel="noopener noreferrer"
                           className="inline-block mt-4 text-primary hover:underline"
