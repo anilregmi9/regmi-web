@@ -15,16 +15,16 @@ const AboutSection = () => {
 
   const education = [
     {
-      degree: "Masters in Geology",
+      degree: "Master's Degree in Geology / Earth Science",
       institution: "Central Department of Geology, Tribhuvan University",
-      year: "2019",
-      description: "Specialized in mineral exploration and geological mapping techniques"
+      year: "2017 – 2019",
+      description: "Grade: 3.69. Specialized in mineral exploration, project management and geological mapping techniques."
     },
     {
-      degree: "Bachelor in Science",
+      degree: "Bachelor of Science (B.Sc.), Geology / Earth Science",
       institution: "Tri-Chandra Multiple Campus",
-      year: "2017",
-      description: "Foundational studies in geology and earth sciences"
+      year: "2013 – 2017",
+      description: "Activities and societies: geological mapping, field works and excursions. Study of the stratigraphy of the Lesser Himalaya along the Malekhu area, Central Nepal, and of the stratigraphy and structure of the Terai, Siwalik and Lesser Himalaya along the Butwal–Tansen area, Western Nepal."
     },
     {
       degree: "High School (+2) Science (Mathematics, Physics, Chemistry)",
@@ -42,11 +42,24 @@ const AboutSection = () => {
 
   const professionalExperiences = [
     {
-      title: "Geologist (Consultant)",
-      company: "Marakat Consult Pvt. Ltd./ Geo Cube Pvt. Ltd.",
-      location: "Nepal",
-      period: "August 2023 - August 2025",
-      description: "Providing consultation services for a wide range of geological and geotechnical investigations related to mining operations and engineering projects, including hydropower, road construction, and infrastructure development.",
+      title: "Geologist (Contract)",
+      company: "Munro Geological Services",
+      location: "New South Wales, Australia · On-site",
+      period: "March 2026 - Present",
+      description: "Working as a contractor geologist at Cowal gold operations, logging grade control, resource definition and discovery holes.",
+      highlights: [
+        "Geological logging of grade control, resource definition and discovery drill holes",
+        "Subsurface data interpretation and quality control of logged data",
+        "Supporting resource definition and near-mine discovery programs",
+        "Applying geology and mineral exploration skills in a large-scale gold operation"
+      ]
+    },
+    {
+      title: "Geologist",
+      company: "Marakat Consult Pvt. Ltd. / Geo Cube Pvt. Ltd.",
+      location: "Nepal · Hybrid",
+      period: "July 2023 - September 2025",
+      description: "Full-time consultation services for a wide range of geological and geotechnical investigations related to mining operations and engineering projects, including hydropower, road construction, and infrastructure development.",
       highlights: [
         "Expert consultation for mining operations and engineering projects",
         "Mineral exploration, reserve estimation, and geotechnical assessments",
@@ -56,16 +69,29 @@ const AboutSection = () => {
       link: "https://marakat.com.np/"
     },
     {
-      title: "Geologist",
+      title: "Exploration Geologist",
       company: "Nepal Jindu Mining Pvt. Ltd.",
-      location: "Nepal",
-      period: "July 2021 - August 2023",
-      description: "Exploration work focused primarily on metallic minerals, particularly copper, iron, lead, and zinc.",
+      location: "Maharajgunj, Kathmandu · Hybrid",
+      period: "July 2021 - July 2023",
+      description: "Worked as exploration geologist for the exploration of metallic minerals in Nepal. Geological logging and drilling management were the major tasks, followed by geophysical exploration (ERT, SRT and VES). The metallic minerals were mainly copper, iron, lead, cobalt and zinc, along with non-metallic deposits.",
       highlights: [
-        "Conducted detailed geological mapping and mineral zonation",
-        "Performed geophysical surveys including ERT and SRT",
-        "Managed core drilling, trenching, and pitting operations",
+        "Detailed geological mapping and mineral zonation mapping",
+        "Geophysical surveys including ERT, SRT and VES",
+        "Core drilling management, trenching and pitting operations",
         "Coordinated with government authorities for licensing and compliance"
+      ]
+    },
+    {
+      title: "Assistant Hydrogeologist",
+      company: "Janakpur Construction and Tubewell Drilling Company",
+      location: "Janakpur, Nepal",
+      period: "November 2017 - August 2018",
+      description: "Assisted in groundwater exploration and tubewell drilling operations across the Terai region, supporting site selection, drilling supervision and aquifer assessment.",
+      highlights: [
+        "Groundwater exploration and tubewell site selection",
+        "Supervision of drilling operations and lithological logging",
+        "Aquifer and water quality assessment",
+        "Problem solving and project management support in the field"
       ]
     }
   ];
@@ -83,21 +109,27 @@ const AboutSection = () => {
         "Conducted hands-on training in engineering geological mapping, borehole log analysis, weathering profile interpretation, and estimation of construction material reserves",
         "Led fieldwork activities at road, highway, and hydropower project sites, focusing on geological data collection, hydrogeology, geohazard mapping, site selection, and hazard mitigation"
       ]
-    },
-    {
-      title: "President",
-      company: "Nepal Geological Student's Society (NGSS)",
-      location: "Nepal",
-      period: "2019 - 2020",
-      description: "Led the Nepal Geological Student's Society, organizing academic events, workshops, and field trips.",
-      highlights: [
-        "Organized geological seminars and educational workshops",
-        "Coordinated with universities and professional bodies",
-        "Promoted geological sciences among students"
-      ],
-      link: "https://ngss.org.np/"
     }
   ];
+
+  const volunteering = [
+    {
+      role: "President",
+      organization: "Nepal Geological Students' Society (NGSS)",
+      period: "August 2019 - December 2020",
+      field: "Education",
+      description: "The organization works for upgrading the geology students of Nepal on different subtopics and professional works in Nepal, along with helping them in academic activities.",
+      link: "https://ngss.org.np/"
+    },
+    {
+      role: "Member",
+      organization: "Survey for collecting data of earthquake damages",
+      period: "May 2015 - June 2015",
+      field: "Disaster Relief",
+      description: "As a volunteer, I really got a chance to meet people and listen to their thoughts about the earthquake, and to give them knowledge about earthquakes. It was a chance to know how to work in the field, share knowledge and make people aware."
+    }
+  ];
+
 
   const skillCategories = [
     {
