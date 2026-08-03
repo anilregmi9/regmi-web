@@ -509,8 +509,56 @@ const AboutSection = () => {
                 ))}
               </div>
             </div>
+
+            {/* Volunteering */}
+            <div className="mt-16">
+              <div className="text-center mb-8">
+                <h3 className="text-3xl font-bold mb-4">Volunteering</h3>
+                <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                  Giving back to the geological community and to people affected by disasters.
+                </p>
+              </div>
+              <div className="grid md:grid-cols-2 gap-8">
+                {volunteering.map((vol, index) => (
+                  <Card key={index} className="shadow-earth">
+                    <CardHeader>
+                      <div className="flex items-start gap-4">
+                        <div className="p-3 bg-accent/10 rounded-lg">
+                          <Users className="w-6 h-6 text-accent" />
+                        </div>
+                        <div className="flex-1">
+                          <CardTitle className="text-xl text-primary">{vol.role}</CardTitle>
+                          <h4 className="font-semibold text-foreground mt-1">{vol.organization}</h4>
+                          <div className="flex flex-wrap items-center gap-3 mt-2 text-muted-foreground">
+                            <span className="flex items-center gap-2">
+                              <CalendarDays className="w-4 h-4" />
+                              {vol.period}
+                            </span>
+                            <Badge variant="outline" className="text-xs">{vol.field}</Badge>
+                          </div>
+                        </div>
+                      </div>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-muted-foreground leading-relaxed">{vol.description}</p>
+                      {(vol as any).link && (
+                        <a
+                          href={(vol as any).link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block mt-4 text-primary hover:underline"
+                        >
+                          Visit Website →
+                        </a>
+                      )}
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
           </div>
         )}
+
 
         {/* Expertise/Skills Section */}
         {activeSection === 'expertise' && (
