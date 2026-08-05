@@ -101,14 +101,15 @@ const AboutSection = () => {
       title: "Lecturer",
       company: "Kathmandu Engineering College",
       location: "Nepal",
-      period: "2017 - 2019",
+      period: "2024 - 2025",
       description: "Delivered comprehensive lectures in Engineering Geology, covering physical geology, petrology, structural geology, and Himalayan geology with emphasis on engineering applications.",
       highlights: [
         "Guided practical sessions on mineral and rock identification, geological map interpretation, preparation of cross-sections, and block diagram analysis",
         "Taught advanced engineering geology topics including rock mass classification, stereographic projection, and structural data interpretation using stereonets, rose diagrams, and histograms",
         "Conducted hands-on training in engineering geological mapping, borehole log analysis, weathering profile interpretation, and estimation of construction material reserves",
         "Led fieldwork activities at road, highway, and hydropower project sites, focusing on geological data collection, hydrogeology, geohazard mapping, site selection, and hazard mitigation"
-      ]
+      ],
+      link: "https://kecktm.edu.np/"
     }
   ];
 
