@@ -27,8 +27,8 @@ const ProjectsSection = () => {
     {
       title: "Geotechnical Investigation",
       location: "Rupa Lake, Kaski, Nepal",
-      description: "Design and Build Earthen Dam, Spillway Cum Bridge, Guide Bund and Associated Works. Provided geotechnical assessment for hydropower development, including slope stability analysis and foundation recommendations.",
-      tags: ["Geotechnical", "Hydropower", "Slope Stability"],
+      description: "Design and Build Earthen Dam, Spillway Cum Bridge, Guide Bund and Associated Works. Delivered a comprehensive geotechnical assessment for the scheme, comprising geotechnical drilling with continuous core recovery, detailed engineering-geological logging of boreholes, and in-situ and laboratory testing. The resulting subsurface data informed slope stability analysis, bearing capacity evaluation and foundation design recommendations for the dam, spillway-cum-bridge and guide bund structures.",
+      tags: ["Geotechnical", "Geotechnical Drilling", "Borehole Logging", "Slope Stability", "Foundation Design", "Hydropower"],
       image: "/lovable-uploads/geotechnical-yagya-anil.jpg",
       isImagePhoto: true,
       credit: "Project led by Geologist Mr. Yagya Murti Aryal of Geo Cube Pvt. Ltd."
