@@ -20,8 +20,8 @@ const ProjectsSection = () => {
     {
       title: "Geophysical Exploration of Copper",
       location: "Myagdi, Nepal",
-      description: "Led the geophysical exploration of copper deposits at Myagdi using Electrical Resistivity Tomography (ERT) to finalize mineral zones. The project also incorporated geological methods including trenching and pitting for near-surface exploration, enabling accurate delineation of copper-bearing zones.",
-      tags: ["ERT", "Copper Exploration", "Trenching", "Pitting", "Mineral Zonation"],
+      description: "Led the geophysical exploration of copper deposits at Myagdi using Electrical Resistivity Tomography (ERT) to finalize mineral zones. The project also incorporated geological methods including trenching and pitting for near-surface exploration, along with diamond drilling and detailed geological logging of the recovered core to confirm mineralization at depth, enabling accurate delineation of copper-bearing zones.",
+      tags: ["ERT", "Copper Exploration", "Diamond Drilling", "Geological Logging", "Trenching", "Pitting", "Mineral Zonation"],
       image: "⛏️"
     },
     {
