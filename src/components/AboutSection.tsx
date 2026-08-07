@@ -257,7 +257,7 @@ const AboutSection = () => {
           
           <div className="space-y-6">
             <p className="text-muted-foreground leading-relaxed">
-              I hold a Master's degree in Geology from Tribhuvan University, Nepal, and have developed a strong foundation in earth sciences through both academic study and extensive fieldwork. Currently, I am working in Australia as a logging geologist, focusing on geological logging and subsurface data interpretation. My primary interest lies in the exploration of metallic minerals.
+              I hold a Master's degree in Geology from Tribhuvan University, Nepal, and have developed a strong foundation in earth sciences through both academic study and extensive fieldwork. Currently, I am working in Australia as an exploration geologist, focusing on geological logging and subsurface data interpretation. My primary interest lies in the exploration of metallic minerals.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               I have gained diverse experience across multiple geological disciplines, including prospecting and exploration of metallic minerals, as well as geotechnical investigations for major infrastructure projects such as hydropower development, road construction, and mining activities.
