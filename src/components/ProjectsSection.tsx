@@ -9,8 +9,8 @@ const ProjectsSection = () => {
     {
       title: "Disaster Induced Land Use Plan",
       location: "Dullu Municipality",
-      description: "Conducted comprehensive geological hazard assessment and developed land use planning recommendations to mitigate disaster risks.",
-      tags: ["Hazard Assessment", "Land Use Planning", "GIS Mapping"],
+      description: "One of my major disaster-related assignments, carried out alongside a renowned expert in disaster risk reduction. The study integrated remote sensing analysis of Landsat imagery and multi-temporal change detection with systematic field verification to inventory and characterise the major landslides of the municipality. Each failure was documented for slope angle and aspect, bedding orientation and its relationship to the slope face, degree of weathering, moisture content and seepage conditions, soil classification, and the presence of pebble- and cobble-sized colluvial material within the failed mass. Engineering-geological interpretation was combined with socio-economic data on affected households, damaged infrastructure and losses incurred to produce hazard, vulnerability and risk zonation maps that directly informed the disaster-induced land use plan and settlement relocation recommendations.",
+      tags: ["Hazard Assessment", "Land Use Planning", "Remote Sensing", "Landsat Imagery", "Landslide Inventory", "Risk Zonation", "GIS Mapping"],
       image: "/lovable-uploads/dullu-1.jpg",
       isImagePhoto: true,
       previewImages: ["/lovable-uploads/dullu-1.jpg", "/lovable-uploads/dullu-4.jpg"],
@@ -65,6 +65,13 @@ const ProjectsSection = () => {
       previewImages: ["/lovable-uploads/iron-pyuthan-2.jpg", "/lovable-uploads/iron-pyuthan-4.jpg"],
       albumLink: "/photos?album=iron-pyuthan",
       credit: "Project led by Mr. Sandeep Mahat and Mr. Anil Regmi"
+    },
+    {
+      title: "Copper Prospecting and Exploration – Nishikhola",
+      location: "Nishikhola Rural Municipality, Baglung, Nepal",
+      description: "Supervised the prospecting and exploration programme for copper mineralisation in Nishikhola Rural Municipality, coordinating the field crew, planning daily targets and ensuring quality control of all field data. Work comprised systematic geological mapping of the prospect area, structural and lithological control studies, and excavation of trenches and pits across the strike of the mineralised zones to expose fresh bedrock. Channel, chip and grab samples were collected from trenches, pits and outcrops under a controlled sampling protocol for assay, and the results were correlated with mapped mineralisation to confirm the continuity and extent of the deposit. Mineralised zones were delineated on the map and their thickness, strike length and inferred depth persistence were used to calculate a tentative resource volume as a basis for recommending further detailed exploration and drilling.",
+      tags: ["Copper Exploration", "Supervision", "Trenching", "Pitting", "Geological Mapping", "Channel Sampling", "Volume Estimation"],
+      image: "⛏️"
     }
   ];
 
