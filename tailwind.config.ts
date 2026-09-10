@@ -56,6 +56,15 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				survey: {
+					canvas: 'hsl(var(--survey-canvas))',
+					surface: 'hsl(var(--survey-surface))',
+					'surface-strong': 'hsl(var(--survey-surface-strong))',
+					signal: 'hsl(var(--survey-signal))',
+					ink: 'hsl(var(--survey-ink))',
+					muted: 'hsl(var(--survey-muted))',
+					line: 'hsl(var(--survey-line))',
+				},
 				earth: {
 					brown: 'hsl(var(--earth-brown))',
 					'brown-light': 'hsl(var(--earth-brown-light))',

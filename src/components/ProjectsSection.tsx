@@ -1,7 +1,6 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, MapPin, FlaskConical } from "lucide-react";
+import { ArrowUpRight, Camera, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const ProjectsSection = () => {
@@ -22,7 +21,8 @@ const ProjectsSection = () => {
       location: "Myagdi, Nepal",
       description: "Led the geophysical exploration of copper deposits at Myagdi using Electrical Resistivity Tomography (ERT) to finalize mineral zones. The project also incorporated geological methods including trenching and pitting for near-surface exploration, along with diamond drilling and detailed geological logging of the recovered core to confirm mineralization at depth, enabling accurate delineation of copper-bearing zones.",
       tags: ["ERT", "Copper Exploration", "Diamond Drilling", "Geological Logging", "Trenching", "Pitting", "Mineral Zonation"],
-      image: "⛏️"
+      image: "/lovable-uploads/field-rock-hammer.jpg",
+      isImagePhoto: true
     },
     {
       title: "Geotechnical Investigation",
@@ -71,7 +71,8 @@ const ProjectsSection = () => {
       location: "Nishikhola Rural Municipality, Baglung, Nepal",
       description: "Supervised the prospecting and exploration programme for copper mineralisation in Nishikhola Rural Municipality, coordinating the field crew, planning daily targets and ensuring quality control of all field data. Work comprised systematic geological mapping of the prospect area, structural and lithological control studies, and excavation of trenches and pits across the strike of the mineralised zones to expose fresh bedrock. Channel, chip and grab samples were collected from trenches, pits and outcrops under a controlled sampling protocol for assay, and the results were correlated with mapped mineralisation to confirm the continuity and extent of the deposit. Mineralised zones were delineated on the map and their thickness, strike length and inferred depth persistence were used to calculate a tentative resource volume as a basis for recommending further detailed exploration and drilling.",
       tags: ["Copper Exploration", "Supervision", "Trenching", "Pitting", "Geological Mapping", "Channel Sampling", "Volume Estimation"],
-      image: "⛏️"
+      image: "/lovable-uploads/field-map-reading.jpg",
+      isImagePhoto: true
     }
   ];
 
@@ -123,147 +124,101 @@ const ProjectsSection = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Featured Projects</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A showcase of my key geological projects and field expeditions across Nepal.
-          </p>
-        </div>
+    <section id="projects" className="projects-theme min-h-screen bg-survey-canvas py-14 text-survey-ink md:py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <header className="mb-8 flex flex-col gap-6 border-b border-survey-line pb-7 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p className="mb-3 font-heading text-xs font-semibold uppercase text-survey-signal">Project index / Nepal field archive</p>
+            <h1 className="font-heading text-4xl font-bold uppercase text-survey-ink md:text-6xl">Field surveys</h1>
+          </div>
+          <div className="max-w-sm md:text-right">
+            <p className="text-sm leading-relaxed text-survey-muted">Geological investigations, mineral exploration, hazard assessment and field research across Nepal.</p>
+            <p className="mt-3 font-heading text-xs uppercase text-survey-signal">07 featured entries · 03 disciplines</p>
+          </div>
+        </header>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-          {projects.map((project, index) => (
-            <Card key={index} className="shadow-soft hover:shadow-earth transition-all duration-300 group">
-              <CardHeader>
-                {(project as any).isImagePhoto ? (
-                  <div className="w-full h-48 rounded-lg mb-4 overflow-hidden">
-                    <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
-                  </div>
-                ) : (
-                  <div className="w-full h-48 bg-gradient-to-br from-earth-brown to-earth-orange rounded-lg mb-4 flex items-center justify-center text-6xl">
-                    {project.image}
-                  </div>
-                )}
-                <div className="flex items-center gap-2 text-muted-foreground mb-2">
-                  <MapPin className="w-4 h-4" />
-                  <span className="text-sm">{project.location}</span>
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {projects.map((project, index) => {
+            const projectData = project as typeof project & { credit?: string; previewImages?: string[]; albumLink?: string };
+            const isLead = index === 0;
+            const isWide = index === 3 || index === 6;
+            return (
+              <article key={project.title} className={`group flex min-h-[25rem] flex-col overflow-hidden border border-survey-line bg-survey-surface transition-colors duration-300 hover:border-survey-signal ${isLead ? "md:col-span-2 lg:row-span-2 lg:min-h-[48rem]" : ""} ${isWide ? "lg:col-span-2" : ""}`}>
+                <div className={`relative overflow-hidden bg-survey-surface-strong ${isLead ? "h-72 lg:h-96" : "h-52"}`}>
+                  <img src={project.image} alt={`${project.title} fieldwork`} loading={isLead ? "eager" : "lazy"} className="h-full w-full object-cover transition-transform duration-500 motion-safe:group-hover:scale-[1.03]" />
+                  <span className="absolute left-0 top-0 bg-survey-signal px-3 py-2 font-heading text-[10px] font-bold uppercase text-survey-canvas">Survey {String(index + 1).padStart(2, "0")}</span>
                 </div>
-                <CardTitle className="text-xl text-primary group-hover:text-accent transition-colors">
-                  {project.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4 leading-relaxed">
-                  {project.description}
-                </p>
-                {(project as any).credit && (
-                  <p className="text-sm text-primary/80 italic mb-4">{(project as any).credit}</p>
-                )}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag, idx) => (
-                    <Badge key={idx} variant="outline" className="text-xs">
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
-                {(project as any).previewImages && (
-                  <div className="grid grid-cols-2 gap-2 mb-4">
-                    {(project as any).previewImages.map((img: string, idx: number) => (
-                      <Link key={idx} to={(project as any).albumLink}>
-                        <div className="aspect-[4/3] rounded-lg overflow-hidden cursor-pointer">
-                          <img src={img} alt={`${project.title} preview ${idx + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
-                        </div>
-                      </Link>
-                    ))}
+                <div className={`flex flex-1 flex-col ${isLead ? "p-6 md:p-8" : "p-5"}`}>
+                  <div className="mb-3 flex items-start gap-2 text-xs text-survey-muted">
+                    <MapPin className="mt-0.5 h-3.5 w-3.5 shrink-0 text-survey-signal" aria-hidden="true" />
+                    <span>{project.location}</span>
                   </div>
-                )}
-                {(project as any).albumLink ? (
-                  <Link to={(project as any).albumLink}>
-                    <Button variant="outline" size="sm" className="w-full">
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      View All Photos
-                    </Button>
-                  </Link>
-                ) : (
-                  <Button variant="outline" size="sm" className="w-full">
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    View Project Details
-                  </Button>
-                )}
-              </CardContent>
-            </Card>
-          ))}
+                  <h2 className={`font-heading font-bold text-survey-ink ${isLead ? "text-3xl" : "text-xl"}`}>{project.title}</h2>
+                  <p className={`mt-4 text-sm leading-7 text-survey-muted ${!isLead ? "lg:line-clamp-6" : ""}`}>{project.description}</p>
+                  {projectData.credit && <p className="mt-4 border-l-2 border-survey-signal pl-3 text-xs italic leading-5 text-survey-ink">{projectData.credit}</p>}
+                  <div className="mt-5 flex flex-wrap gap-1.5">
+                    {project.tags.map((tag) => <Badge key={tag} variant="outline" className="rounded-sm border-survey-line px-2 py-1 text-[10px] font-medium text-survey-muted">{tag}</Badge>)}
+                  </div>
+                  <div className="mt-auto pt-6">
+                    {projectData.albumLink ? (
+                      <Button asChild variant="outline" size="sm" className="w-full rounded-sm border-survey-signal bg-transparent font-heading text-xs uppercase text-survey-signal hover:bg-survey-signal hover:text-survey-canvas">
+                        <Link to={projectData.albumLink}><Camera aria-hidden="true" /> View field photos</Link>
+                      </Button>
+                    ) : (
+                      <div className="flex items-center justify-between border-t border-survey-line pt-4 font-heading text-[10px] uppercase text-survey-muted">
+                        <span>Record complete</span><ArrowUpRight className="h-4 w-4 text-survey-signal" aria-hidden="true" />
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </article>
+            );
+          })}
         </div>
 
-        {/* Research Section */}
-        <div className="border-t border-border pt-20 mb-20">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold mb-4 flex items-center justify-center gap-3">
-              <FlaskConical className="w-8 h-8 text-primary" />
-              Projects Led by Me
-            </h3>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Research and exploration projects I have led across Nepal.
-            </p>
+        <section className="mt-20 border-t border-survey-line pt-10">
+          <div className="grid gap-8 lg:grid-cols-[0.8fr_2fr]">
+            <div><p className="mb-2 font-heading text-xs font-semibold uppercase text-survey-signal">Leadership record</p><h2 className="font-heading text-3xl font-bold text-survey-ink">Projects led by me</h2><p className="mt-3 text-sm text-survey-muted">Research and exploration programmes led across Nepal.</p></div>
+            <ol className="divide-y divide-survey-line border-y border-survey-line">
+              {researchProjects.map((project, index) => <li key={project} className="grid grid-cols-[3rem_1fr] gap-3 py-5"><span className="font-heading text-xs text-survey-signal">{String(index + 1).padStart(2, "0")}</span><p className="text-sm leading-6 text-survey-ink">{project}</p></li>)}
+            </ol>
           </div>
+        </section>
 
-          <div className="max-w-4xl mx-auto">
-            <Card className="shadow-soft">
-              <CardContent className="p-6">
-                <ol className="space-y-4">
-                  {researchProjects.map((project, index) => (
-                    <li key={index} className="flex gap-4">
-                      <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 text-primary font-semibold flex items-center justify-center">
-                        {index + 1}
-                      </span>
-                      <p className="text-muted-foreground pt-1">{project}</p>
-                    </li>
-                  ))}
-                </ol>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-
-        {/* Researches Section */}
-        <div className="border-t border-border pt-20 mb-20">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold mb-4">Researches</h3>
-          </div>
-          <div className="max-w-4xl mx-auto space-y-6">
-            <Card className="shadow-soft">
-              <CardContent className="p-6">
+        <section className="mt-20 border-t border-survey-line pt-10">
+          <div className="mb-8"><p className="mb-2 font-heading text-xs font-semibold uppercase text-survey-signal">Published & academic</p><h2 className="font-heading text-3xl font-bold text-survey-ink">Research archive</h2></div>
+          <div className="grid gap-4 lg:grid-cols-2">
+            <article className="border border-survey-line bg-survey-surface p-6">
+                <span className="font-heading text-[10px] uppercase text-survey-signal">Master's thesis</span>
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   My master's thesis focused on the stratigraphy, structural geology, and petrography of the Lesser Himalaya in the eastern Syangja region, along with the identification and assessment of mineral resources.
                 </p>
-                <p className="text-sm text-primary/80 italic mb-2">Supervisor: Prof. Dr. Lalu Prasad Paudel</p>
-                <p className="text-sm text-primary/80 italic mb-4">Thesis Partner: Mr. Biren G.C.</p>
+                <p className="text-sm text-survey-ink italic mb-2">Supervisor: Prof. Dr. Lalu Prasad Paudel</p>
+                <p className="text-sm text-survey-ink italic mb-4">Thesis Partner: Mr. Biren G.C.</p>
                 <div className="grid grid-cols-2 gap-2 mb-4">
                   {["/lovable-uploads/thesis-1.jpg", "/lovable-uploads/thesis-7.jpg"].map((img, idx) => (
                     <Link key={idx} to="/photos?album=thesis">
-                      <div className="aspect-[4/3] rounded-lg overflow-hidden cursor-pointer">
+                      <div className="aspect-[4/3] overflow-hidden cursor-pointer">
                         <img src={img} alt={`Thesis fieldwork ${idx + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
                       </div>
                     </Link>
                   ))}
                 </div>
                 <Link to="/photos?album=thesis">
-                  <Button variant="outline" size="sm" className="w-full">
-                    <ExternalLink className="w-4 h-4 mr-2" />
+                  <Button variant="outline" size="sm" className="w-full rounded-sm border-survey-signal bg-transparent text-survey-signal hover:bg-survey-signal hover:text-survey-canvas">
+                    <Camera className="w-4 h-4 mr-2" />
                     View All Photos
                   </Button>
                 </Link>
-              </CardContent>
-            </Card>
+            </article>
             
-            <Card className="shadow-soft">
-              <CardContent className="p-6">
+            <article className="border border-survey-line bg-survey-surface p-6">
+                <span className="font-heading text-[10px] uppercase text-survey-signal">Journal article</span>
                 <h4 className="font-semibold text-lg mb-2">
                   Landslide Characteristics and Distribution at the Kathmandu Kyirong Highway Corridor in Pre-Quake, Co-Seismic and Post-Quake Situations
                 </h4>
                 <p className="text-muted-foreground mb-2">
-                  Susmita Dhakal, Peng Cui, Li-Jun Su, Qiang Zou, Rama Ghimire, Sumika Pakhrin and <span className="font-semibold text-primary">Anil Regmi</span>
+                  Susmita Dhakal, Peng Cui, Li-Jun Su, Qiang Zou, Rama Ghimire, Sumika Pakhrin and <span className="font-semibold text-survey-signal">Anil Regmi</span>
                 </p>
                 <p className="text-sm text-muted-foreground italic mb-4">
                   Perspectives on Higher Education — A Peer Reviewed Journal
@@ -271,57 +226,50 @@ const ProjectsSection = () => {
                 <div className="grid grid-cols-2 gap-2 mb-4">
                   {["/lovable-uploads/kyirong-3.jpg", "/lovable-uploads/kyirong-7.jpg"].map((img, idx) => (
                     <Link key={idx} to="/photos?album=kyirong">
-                      <div className="aspect-[4/3] rounded-lg overflow-hidden cursor-pointer">
+                      <div className="aspect-[4/3] overflow-hidden cursor-pointer">
                         <img src={img} alt={`Kyirong Highway research ${idx + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
                       </div>
                     </Link>
                   ))}
                 </div>
                 <Link to="/photos?album=kyirong">
-                  <Button variant="outline" size="sm" className="w-full">
-                    <ExternalLink className="w-4 h-4 mr-2" />
+                  <Button variant="outline" size="sm" className="w-full rounded-sm border-survey-signal bg-transparent text-survey-signal hover:bg-survey-signal hover:text-survey-canvas">
+                    <Camera className="w-4 h-4 mr-2" />
                     View All Photos
                   </Button>
                 </Link>
-              </CardContent>
-            </Card>
+            </article>
           </div>
-        </div>
+        </section>
 
-        <div className="border-t border-border pt-20">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold mb-4">Photo Gallery</h3>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+        <section className="mt-20 border-t border-survey-line pt-10">
+          <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div><p className="mb-2 font-heading text-xs font-semibold uppercase text-survey-signal">Visual record</p><h2 className="font-heading text-3xl font-bold text-survey-ink">Field gallery</h2></div>
+            <p className="max-w-2xl text-sm text-survey-muted md:text-right">
               Visual documentation of my work across various geological projects, field expeditions, and research activities throughout Nepal.
             </p>
-            <div className="flex justify-center gap-4 mt-6">
-              <Badge variant="secondary">Field Expeditions</Badge>
-              <Badge variant="secondary">Geological Samples</Badge>
-              <Badge variant="secondary">Geological Mapping</Badge>
-            </div>
           </div>
 
-          <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-5">
             {galleryImages.map((image, index) => (
-              <Card key={index} className="shadow-soft hover:shadow-earth transition-all duration-300 group overflow-hidden">
-                <div className="aspect-video overflow-hidden">
+              <figure key={image.image} className={`group overflow-hidden border border-survey-line bg-survey-surface ${index === 0 ? "col-span-2 row-span-2" : ""}`}>
+                <div className="aspect-[4/3] overflow-hidden">
                   <img 
                     src={image.image} 
                     alt={image.title}
+                    loading="lazy"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <CardContent className="p-4">
-                  <p className="text-sm text-muted-foreground">{image.title}</p>
-                </CardContent>
-              </Card>
+                <figcaption className="p-3 text-xs leading-5 text-survey-muted">{image.title}</figcaption>
+              </figure>
             ))}
           </div>
 
-          <div className="text-center mt-8">
-            <Button variant="outline">View All Photos</Button>
+          <div className="mt-8 flex justify-end">
+            <Button asChild variant="outline" className="rounded-sm border-survey-signal bg-transparent font-heading text-xs uppercase text-survey-signal hover:bg-survey-signal hover:text-survey-canvas"><Link to="/photos">Open full photo archive <ArrowUpRight /></Link></Button>
           </div>
-        </div>
+        </section>
       </div>
     </section>
   );

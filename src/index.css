@@ -56,6 +56,15 @@
     --font-heading: 'Inter', system-ui, sans-serif;
     --font-body: 'Inter', system-ui, sans-serif;
 
+    /* Projects page: Field Signal */
+    --survey-canvas: 202 18% 8%;
+    --survey-surface: 195 12% 11%;
+    --survey-surface-strong: 202 22% 19%;
+    --survey-signal: 43 80% 54%;
+    --survey-ink: 197 17% 88%;
+    --survey-muted: 200 8% 63%;
+    --survey-line: 198 13% 22%;
+
     --sidebar-background: 240 10% 8%;
     --sidebar-foreground: 0 0% 90%;
     --sidebar-primary: 340 82% 52%;
@@ -139,6 +148,12 @@
   p  { line-height: 1.7; }
 
   section { scroll-margin-top: 5rem; }
+
+  .projects-theme {
+    --font-heading: 'Space Grotesk', system-ui, sans-serif;
+    --font-body: 'DM Sans', system-ui, sans-serif;
+    font-family: var(--font-body);
+  }
 
   .gradient-earth {
     background: var(--gradient-earth);
